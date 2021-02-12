@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Blog
-permalink: /Blog/
+permalink: /blog/
 ---
 
 This is a page to link to all of my blogs!
