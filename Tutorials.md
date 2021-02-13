@@ -6,6 +6,6 @@ permalink: /tutorials
 
 This is a page to link to all of my Tutorials!
 
-[OverTheWire-Bandit]([https://zacvr.github.io/OverTheWire/Bandit)
+[OverTheWire-Bandit](https://zacvr.github.io/OverTheWire/Bandit)
 
 ghf
