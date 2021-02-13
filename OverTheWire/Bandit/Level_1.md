@@ -17,10 +17,23 @@ Now type "ssh bandit1@bandit.labs.overthewire.org -p 2220"
 <br/>
 Password:"boJ9jbbUNNfktd78OOpsqOltutMc3MY1"
 <br/>
-Now we are into level 1
+We are now into level 1
 <br/><br/>
-
-ssh bandit1@bandit.labs.overthewire.org -p 2220
+For this level we are told
+<br/><br/>
+"The password for the next level is stored in a file called - located in the home directory"
+<br/><br/>
+If you have done this before you will know you can use
+<br/><br/>
+"cat ./-"
+<br/><br/>
+to read this file which will give us the password
+<br/><br/>
+"CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9"
+<br/><br/>
+Once again we can use
+<br/>
+"ssh bandit2@bandit.labs.overthewire.org -p 2220"
 and the password we just found to login to the next level
 <br/>
 [Next Level: 2](https://zacvr.github.io//Tutorials/OTWBandit/Level_2)
