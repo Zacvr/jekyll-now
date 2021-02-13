@@ -22,11 +22,11 @@ We are now into level 2
 <br/><br/>
 For this level we are told
 <br/><br/>
-"The password for the next level is stored in a file called spaces in this filename located in the home directory"
+"The password for the next level is stored in a file called 'spaces in this filename' located in the home directory"
 <br/><br/>
 If you have done this before you will know you can use
 <br/><br/>
-"'cat space'" (Keeping one pair of single or double qoutes around the file)
+"'cat spaces in this filename'" (Keeping one pair of single or double qoutes around the file)
 <br/><br/>
 to read this file which will give us the password
 <br/><br/>
