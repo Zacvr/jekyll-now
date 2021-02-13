@@ -35,7 +35,7 @@ to read this file which will give us the password
 Once again we can use
 <br/>
 "ssh bandit3@bandit.labs.overthewire.org -p 2220"
+<br/>
 and the password we just found to login to the next level
-<br/>
-<br/>
+<br/><br/>
 [Next Level: 3](https://zacvr.github.io//Tutorials/OTWBandit/Level_3)
