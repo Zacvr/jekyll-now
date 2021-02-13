@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Blog
-permalink: /blog/
+title: Tutorials
+permalink: /tutorials/
 ---
 
-This is a page to link to all of my blogs!!
-
-[Cipher Solver]([https://github.com/Zacvr/CipherSolver])
+This is a page to link to all of my Tutorials!
