@@ -19,7 +19,7 @@ I use this specific line to type in each level
 <br/><br/>
 "ssh bandit0@bandit.labs.overthewire.org -p 2220" 
 <br/><br/>
-Then just change the 0 for the level you want to type the password to
+just change the 0 for the level you will be going to
 <br/><br/>
 Then use the password:bandit0
 <br/><br/>
