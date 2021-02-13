@@ -22,7 +22,7 @@ We are now into level 4
 <br/><br/>
 For this level we are told
 <br/><br/>
-"The password for the next level is stored in the file data.txt next to the word millionth"
+"The password for the next level is stored in the file data.txt and is the only line of text that occurs only once"
 <br/><br/>
 If you have done this before you will know you can use
 <br/><br/>
