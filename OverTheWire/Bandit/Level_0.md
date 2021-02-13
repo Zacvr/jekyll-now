@@ -32,8 +32,8 @@ If you use "cat readme" you will get the password
 "boJ9jbbUNNfktd78OOpsqOltutMc3MY1"
 <br/><br/>
 then you can type in
-<br/><br/>
-ssh bandit1@bandit.labs.overthewire.org -p 2220
+<br/>
+"ssh bandit1@bandit.labs.overthewire.org -p 2220"
 <br/>
 and the password we just found to login to the next level
 <br/><br/>
