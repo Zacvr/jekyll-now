@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Bandit Level 011
+title: Bandit Level 0
 permalink: /Tutorials/OTWBandit/Level_0/
 ---
 [OverTheWire-Level Directory](https://zacvr.github.io/Tutorials/OTWBandit/)
-<br/><br/>
-Level 0 Fight!
 <br/><br/>
 In order to begin you will need to use PuTTY or preferably Linux and use the following information
 <br/><br/>
