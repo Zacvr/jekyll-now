@@ -11,10 +11,9 @@ Level 1 Fight!
 <br/><br/>
 In order to begin you will need to use PuTTY or preferably Linux and use the following information
 <br/><br/>
-If you are currently in a level type
-"logout"
+If you are currently in a level type "logout"
 <br/><br/>
-"ssh bandit1@bandit.labs.overthewire.org -p 2220"
+Now type "ssh bandit1@bandit.labs.overthewire.org -p 2220"
 <br/>
 Password:"boJ9jbbUNNfktd78OOpsqOltutMc3MY1"
 <br/>
