@@ -1,6 +1,6 @@
 ---
 layout: page
-title: OTWBandit
+title: OverTheWire-Bandit
 permalink: /Tutorials/OTWBandit/
 ---
 
