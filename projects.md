@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects
+title: Github/Python Projects
 permalink: /projects
 ---
 
