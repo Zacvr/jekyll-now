@@ -8,4 +8,4 @@ permalink: /Tutorials/OTWBandit/Level_1/
 Level 1 Fight!
 
 <br/>
-[Next Level: 2](https://zacvr.github.io//Tutorials/OTWBandit/Level_21)
+[Next Level: 2](https://zacvr.github.io//Tutorials/OTWBandit/Level_2)
