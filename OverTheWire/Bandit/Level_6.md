@@ -30,12 +30,6 @@ owned by group bandit6
 <br/>
 33 bytes in size"
 <br/><br/>
-If you have done this before you will know you can use
-<br/><br/>
-"ls " to show files/folders
-<br/><br/>
-If we then "cd inhere"
-<br/><br/>
 To find the password we will need to find the correct file
 <br/><br/>
 "find / -user bandit7 -group bandit6 -size 33c"
