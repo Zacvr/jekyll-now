@@ -5,7 +5,7 @@ permalink: /Tutorials/OTWBandit/Level_0/
 ---
 [OverTheWire-Level Directory](https://zacvr.github.io/Tutorials/OTWBandit/)
 <br/>
-Level 0 Fight!
+Level 01 Fight!
 <br/>
 In order to begin you will need to use PuTTY or preferably Linux and use the following information
 <br/>
