@@ -34,6 +34,7 @@ If you use "cat readme" you will get the password
 then you can type in
 <br/><br/>
 ssh bandit1@bandit.labs.overthewire.org -p 2220
+<br/><br/>
 and the password we just found to login to the next level
 <br/><br/>
 [Next Level: 1](https://zacvr.github.io//Tutorials/OTWBandit/Level_1)
