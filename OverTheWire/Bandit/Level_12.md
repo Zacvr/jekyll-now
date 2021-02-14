@@ -14,7 +14,7 @@ In order to begin you will need to use PuTTY or preferably Linux and use the fol
 <br/><br/>
 If you are currently in a level type "logout"
 <br/><br/>
-Now type "ssh bandit9@bandit.labs.overthewire.org -p 2220"
+Now type "ssh bandit12@bandit.labs.overthewire.org -p 2220"
 <br/>
 Password:"5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu"
 <br/>
