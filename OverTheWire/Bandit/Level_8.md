@@ -18,7 +18,7 @@ Now type "ssh bandit8@bandit.labs.overthewire.org -p 2220"
 <br/>
 Password:"cvX2JJa4CFALtqS87jk27qwqGhBM9plV"
 <br/>
-We are now into level 4
+We are now into level 8
 <br/><br/>
 For this level we are told
 <br/><br/>
@@ -32,13 +32,11 @@ We then see"data.txt"
 <br/><br/>
 To find the password we will need to find the correct part of the txt file with
 <br/><br/>
-"grep millionth data.txt"
+"cat data.txt | sort | uniq -u"
 <br/><br/>
-This will show "millionth       cvX2JJa4CFALtqS87jk27qwqGhBM9plV" as a suspect
+This will read the file/sort it/ and then find only single occurences
 <br/><br/>
-The password seems to already be shown!
-<br/><br/>
-"cvX2JJa4CFALtqS87jk27qwqGhBM9plV" is the password
+"UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR" is the password
 <br/><br/>
 Once again we can use
 <br/>
