@@ -18,7 +18,7 @@ Now type "ssh bandit3@bandit.labs.overthewire.org -p 2220"
 <br/>
 Password:"UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK"
 <br/>
-We are now into level 2
+We are now into level 3
 <br/><br/>
 For this level we are told
 <br/><br/>
