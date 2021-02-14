@@ -38,11 +38,11 @@ This will show "millionth       cvX2JJa4CFALtqS87jk27qwqGhBM9plV" as a suspect
 <br/><br/>
 The password seems to already be shown!
 <br/><br/>
-""
+"cvX2JJa4CFALtqS87jk27qwqGhBM9plV" is the password
 <br/><br/>
 Once again we can use
 <br/>
-"ssh bandit8@bandit.labs.overthewire.org -p 2220"
+"ssh bandit9@bandit.labs.overthewire.org -p 2220"
 <br/>
 and the password we just found to login to the next level
 <br/><br/>
