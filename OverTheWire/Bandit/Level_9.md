@@ -14,11 +14,11 @@ In order to begin you will need to use PuTTY or preferably Linux and use the fol
 <br/><br/>
 If you are currently in a level type "logout"
 <br/><br/>
-Now type "ssh bandit8@bandit.labs.overthewire.org -p 2220"
+Now type "ssh bandit9@bandit.labs.overthewire.org -p 2220"
 <br/>
 Password:"UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR"
 <br/>
-We are now into level 8
+We are now into level 9
 <br/><br/>
 For this level we are told
 <br/><br/>
