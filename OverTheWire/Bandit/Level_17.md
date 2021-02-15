@@ -40,9 +40,9 @@ This shows 2 possibilities
 <br/><br/>
 "
 42c42
-< kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
---
-> w0Yfolrc5bwjS4qw5mq1nnQi6mF03bii
+> kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+---
+< w0Yfolrc5bwjS4qw5mq1nnQi6mF03bii
 "
 <br/><br/>
 We can try both of these for the next level or
