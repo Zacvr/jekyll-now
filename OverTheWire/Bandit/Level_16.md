@@ -48,7 +48,7 @@ We then type in the current password and hit enter
 <br/><br/>
 We get a message that says "Correct!"
 <br/><br/>
-This time we save the RSA Private Key
+This time we save the RSA Private Key as "bandit17.key"
 <br/><br/>
 "
 -----BEGIN RSA PRIVATE KEY-----
