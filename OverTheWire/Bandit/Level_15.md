@@ -28,7 +28,7 @@ For this level we need to use OpenSSL to connect to port 30001 and send the pass
 <br/><br/>
 The "s_client" creates a generic SSL/TLS client which connects to the localhost on the typed in port
 <br/><br/>
-We then type in the current password and his enter
+We then type in the current password and hit enter
 <br/><br/>
 We get a message that says "Correct!" with the password
 <br/><br/>
