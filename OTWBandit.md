@@ -5,7 +5,6 @@ permalink: /Tutorials/OTWBandit/
 ---
 
 This will be a "how to" guide for Over The Wires Bandit Challenges!
-Test
 
 [Level 0](https://zacvr.github.io//Tutorials/OTWBandit/Level_0)
 <br/>
