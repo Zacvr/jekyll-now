@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Welcome Room
+title: Tutorial
 permalink: /Tutorials/TryHackMe/Tutorial/
 ---
 
