@@ -43,3 +43,5 @@ Once we see the IP we can connect to the IP (via a web browser)
 It will be just the IP for me that was "10.10.118.109"
 <br/>
 It will show a page along with our flag!
+<br/><br/>
+[TryHackMe Directory](https://zacvr.github.io/Tutorials/TryHackMe/)
