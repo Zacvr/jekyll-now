@@ -32,7 +32,7 @@ lets run a quick command on those 3 ports
 <br/>
 "-v" increases the verbosity *adds more words* (you can use -vv for a greater effect)
 <br/><br/>
-<img src="/images/TryHackMe/Blue/Blue-MS17.PNG">
+
 <br/><br/>
 Now we have our final flag of task 1!
 <br/><br/>
