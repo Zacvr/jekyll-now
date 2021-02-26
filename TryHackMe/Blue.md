@@ -6,6 +6,12 @@ permalink: /Tutorials/TryHackMe/Blue/
 
 [TryHackMe Directory](https://zacvr.github.io/Tutorials/TryHackMe/)
 <br/><br/>
+<br/><br/>
+<br/><br/>
+Flags will be **BOLD**
+<br/><br/>
+<br/><br/>
+<br/><br/>
 I used this page to help learn more Nmap commands maybe you can to!
 <br/><br/>
 https://www.stationx.net/nmap-cheat-sheet/
@@ -36,7 +42,7 @@ lets run a quick command on those 3 ports
 <br/><br/>
 Now we have our final flag of task 1!
 <br/><br/>
-in our command we see "ms17-010" it even shows the disclosure date right below the red box
+in our command we see **"ms17-010"** it even shows the disclosure date right below the red box
 <br/><br/>
 <br/><br/>
 <br/><br/>
