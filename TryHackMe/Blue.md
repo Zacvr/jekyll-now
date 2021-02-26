@@ -10,7 +10,7 @@ Start the machine and the connect using your Open VPN
 <br/><br/>
 Run "nmap *IP of Active machine*" to scan 1000 common ports
 <br/><br/>
-<img src="images/TryHackMe/Blue/Blue-Port Count.PNG">
+<img src="/images/TryHackMe/Blue/Blue-Port Count.PNG">
 <br/><br/>
 <br/><br/>
 <br/><br/>
