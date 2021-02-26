@@ -6,6 +6,10 @@ permalink: /Tutorials/TryHackMe/Blue/
 
 [TryHackMe Directory](https://zacvr.github.io/Tutorials/TryHackMe/)
 <br/><br/>
+I used this page to help learn more Nmap commands maybe you can to!
+<br/><br/>
+https://www.stationx.net/nmap-cheat-sheet/
+<br/><br/>
 Start the machine and the connect using your Open VPN
 <br/><br/>
 Run "nmap *IP of Active machine*" to scan 1000 common ports
