@@ -164,24 +164,28 @@ lets cat it!
 <img src="/images/TryHackMe/Blue/Task 5-1.PNG">
 "**flag{access_the_machine}**"
 <br/><br/>
-The second flag is where passwords are stored which would be C:\windows\system32
+The second flag is where passwords are stored which would be "C:/windows/system32/config"
 <br/><br/>
+"cd C:/Windows/System32/Config"
 <br/><br/>
+"dir"
 <br/><br/>
+Will show us there is a "flag2.txt"
 <br/><br/>
+<img src="/images/TryHackMe/Blue/Task 5-2.PNG">
+<br/>
+"**flag{sam_database_elevated_access}**"
+<br/>
+We now have 2 of the 3 flags!
 <br/><br/>
+For the final flag we don't have much context so lets search instead
 <br/><br/>
+"search -f flag*.txt" should work
 <br/><br/>
+We now see a flag3.txt in Jons documents 
 <br/><br/>
+"**flag{admin_documents_can_be_valuable}**"
 <br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
+We have finally succeeded in the room!
 <br/><br/>
 [TryHackMe Directory](https://zacvr.github.io/Tutorials/TryHackMe/)
