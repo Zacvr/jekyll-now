@@ -149,6 +149,7 @@ for hashcat we will use "sudo hashcat -a 0 -m 1000 Bluehashes.txt rockyou.wordli
 -a is for the attack mode 0, -m 1000 is for the NTLM hash format, --force is for if you do not have a Intel OpenCL runtime, --username ignores the username, > Hashed.txt names a file with the output
 <br/><br/>
 <img src="/images/TryHackMe/Blue/Task 4-2.PNG">
+<br/>
 In that new file at the end of Jons line is "**alqfna22**"
 <br/><br/>
 **TASK 5**
