@@ -62,7 +62,7 @@ This will show several options but since weknow we have a Windows machine we can
 "use 2" will choose the second choice
 <br/><br/>
 **"exploit/windows/smb/ms17_010_eternalblue"** is the answer for the full path of the code
-br/><br/>
+<br/><br/>
 Next up "Set RHOSTS *IP of Active machine*"
 <br/><br/>
 **"RHOSTS"** is the answer for the name of the value
@@ -91,12 +91,14 @@ now we need to search for shell_to_meterpreter
 <br/><br/>
 We now see the answer to a question!
 <br/><br/>
+<img src="/images/TryHackMe/Blue/Task 3-1.PNG">
 "**post/multi/manage/shell_to_meterpreter**"
 <br/><br/>
 Now lets use what we found
 <br/><br/>
 "use post/multi/manage/shell_to_meterpreter"
 <br/><br/>
+<img src="/images/TryHackMe/Blue/Task 3-2.PNG">
 use "show options" and we see we need to change "**Session**"
 <br/><br/>
 now we need to set our session
@@ -127,6 +129,7 @@ Now we get to play with hashes!
 <br/><br/>
 "hashdump" will give us 3 hashes
 <br/><br/>
+<img src="/images/TryHackMe/Blue/Task 4-1.PNG">
 "**Jon**" is the answer to 1 question of Task 4
 <br/><br/>
 if you google "windows password hash format" you will see they are either LM or NTLM
@@ -141,6 +144,7 @@ for hashcat we will use "sudo hashcat -a 0 -m 1000 Bluehashes.txt rockyou.wordli
 <br/><br/>
 -a is for the attack mode 0, -m 1000 is for the NTLM hash format, --force is for if you do not have a Intel OpenCL runtime, --username ignores the username, > Hashed.txt names a file with the output
 <br/><br/>
+<img src="/images/TryHackMe/Blue/Task 4-2.PNG">
 In that new file at the end of Jons line is "**alqfna22**"
 <br/><br/>
 **TASK 5**
@@ -157,6 +161,7 @@ lets cat it!
 <br/><br/>
 "cat flag1.txt"
 <br/><br/>
+<img src="/images/TryHackMe/Blue/Task 5-1.PNG">
 "**flag{access_the_machine}**"
 <br/><br/>
 The second flag is where passwords are stored which would be C:\windows\system32
