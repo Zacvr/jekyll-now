@@ -183,7 +183,9 @@ For the final flag we don't have much context so lets search instead
 "search -f flag*.txt" should work
 <br/><br/>
 We now see a flag3.txt in Jons documents 
-<br/><br/>
+<br/>
+<img src="/images/TryHackMe/Blue/Task 5-3.PNG">
+<br/>
 "**flag{admin_documents_can_be_valuable}**"
 <br/><br/>
 We have finally succeeded in the room!
