@@ -60,11 +60,15 @@ Once we get our ASCII art we can run the next command
 This will show several options but since weknow we have a Windows machine we can try those first
 <br/><br/>
 "use 2" will choose the second choice
-<br/><br/>
+<br/>
+<img src="/images/TryHackMe/Blue/Task 2-2.PNG">
+<br/>
 **"exploit/windows/smb/ms17_010_eternalblue"** is the answer for the full path of the code
 <br/><br/>
 Next up "Set RHOSTS *IP of Active machine*"
-<br/><br/>
+<br/>
+<img src="/images/TryHackMe/Blue/Task 2-3.PNG">
+<br/>
 **"RHOSTS"** is the answer for the name of the value
 <br/><br/>
 We will also need to set the LHOSTS to tun0
