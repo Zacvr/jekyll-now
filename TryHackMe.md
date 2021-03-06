@@ -15,3 +15,5 @@ This will be a "how to" guide for the Try Hack Me Challenges!
 [OpenVPN](https://zacvr.github.io//Tutorials/TryHackMe/OpenVPN)
 <br/>
 [Blue](https://zacvr.github.io//Tutorials/TryHackMe/Blue)
+<br/>
+[Ice](https://zacvr.github.io//Tutorials/TryHackMe/Ice)
