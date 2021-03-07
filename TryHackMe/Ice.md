@@ -49,7 +49,7 @@ Lets use a fast nmap scan (top 100 ports)
 10.10.39.194 however had multiple!
 
 
-<img src="/images/TryHackMe/Ice/task2-3.PNG">
+<img src="/images/TryHackMe/Ice/task 2-3.PNG">
 
 
 This looks promising!
@@ -295,9 +295,9 @@ This help menu is invaluable to us currently
 is the answer to #6
 
 
-Now let try to login to the user named "Dark" with their password
+Now we could try to login to the user named "Dark" with their password
 
-we may need to run a module to enable RDP
+we may need to run a module to enable RDP if it was not on
 
 "run post/windows/manage/enable_rdp"
 
