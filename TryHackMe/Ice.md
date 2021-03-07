@@ -49,7 +49,7 @@ Lets use a fast nmap scan (top 100 ports)
 10.10.39.194 however had multiple!
 
 
-<img src="/images/TryHackMe/Ice/Task2-3.PNG">
+<img src="/images/TryHackMe/Ice/task2-3.PNG">
 
 
 This looks promising!
@@ -214,12 +214,92 @@ after doing it all again lets type "run"
 
 Once that finally works we can run "getprivs" to see permissions 
 
+<img src="/images/TryHackMe/Ice/task 4-15.PNG">
+
+**SeTakeOwnershipPrivilege** is the answer to Task 4 #15
+
+Time for Task 5!
+
+First we need to migrate to the printer spool service (which is named Spoolsv.exe)
+
+<img src="/images/TryHackMe/Ice/task 5-2.PNG">
+
+**spoolsv.exe** is the answer to #2
+
+now we must migrate to the service
+
+"migrate 1360"
+
+Now we need to see what our username is with "getuid"
 
 
+<img src="/images/TryHackMe/Ice/task 5-4.PNG">
+
+**NT AUTHORITY\SYSTEM** is the answer to #4
+
+It now wants us to use kiwi by typing 
+
+"load kiwi"
+
+Then lets look at the help memnu with 
+
+"help"
+
+<img src="/images/TryHackMe/Ice/task 5-7.PNG">
+
+**creds_all** is the answer to #7
+
+lets try running it!
+
+"creds_all"
+
+<img src="/images/TryHackMe/Ice/task 5-8.PNG">
 
 
+**Password01!** Is a super secure answer to #8
 
 
+Time for task 6!
+
+It wants us to revist the help menu with "help"
+
+we need to dump the hashes with 
+
+<img src="/images/TryHackMe/Ice/task 6-2.PNG">
+
+**hashdump** is the input we need
+
+Now to see the users screen we can look at our help again
+
+<img src="/images/TryHackMe/Ice/task 6-3.PNG">
+
+**screenshare**
+
+Yet again the help will show us how we can record the mic
+
+<img src="/images/TryHackMe/Ice/task 6-4.PNG">
+
+**record_mic**
+
+
+Now we learn how to modify timestamps with
+
+<img src="/images/TryHackMe/Ice/task 6-5.PNG">
+
+**timestomp** for #5
+
+This help menu is invaluable to us currently
+
+<img src="/images/TryHackMe/Ice/task 6-6.PNG">
+
+is the answer to #6
+
+
+Now let try to login to the user named "Dark" with their password
+
+we may need to run a module to enable RDP
+
+"run post/windows/manage/enable_rdp"
 
 We have finally succeeded in the room!
 <br/><br/>
