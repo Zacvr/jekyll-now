@@ -14,7 +14,108 @@ Flags will be **BOLD**
 <br/><br/>
 
 
+For this challenge we will play with some coding
 
+First lets connect!
+
+"ssh tryhackme@*IP*
+
+Password
+"reismyfavl33t"
+
+While it does not say it we need to change folders
+
+"cd introduction" will put us in the right place
+
+Now lets run some basic commands
+
+"./intro" will show a bit of text
+
+It asks if I want to print 333.5k characters (I definitely wont read it all)
+
+at this stage it seems to want us to type 
+
+"aa"
+
+This popped up with a "Analyze all flags staring with sym. entry0 (aa)
+
+It now wants us to run "e asm.syntax=att"
+
+It shows us "?" shows some information about commands
+
+"a?" shows that the next command af1 analyzes functionsa?
+
+it does not show anything about af1 however
+
+"af1" makes me realize something is borked... lets run it back!
+
+"exit"
+
+"y"
+
+"y"
+
+"r2 -d intro"
+
+now asks if we wanna play some chess!
+
+I now realized that most of this is theory and reading for now
+
+"ls"
+
+we are now in task 4 after our reading
+
+we need to get to the if-statment folder
+
+"cd ./if-statement/"
+
+"r2 -d if1"
+
+lets run their other commands
+
+"aaa"
+
+"af1"
+
+"pdf @main"
+
+This did not work...
+
+lets try again!
+
+"exit"
+
+"y"
+
+"y"
+
+"r2 -d if1"
+
+"aaa"
+
+"af1"
+
+"pdf @main"
+
+Now we are in the correct spot!
+
+"db 0x55ae52836612"
+
+"Cannot place a breakpoint on 0x55ae52836612 unmapped memory.See e? dbg.bpinmaps"
+
+thats... not right is it?
+
+Oh wait! our hex addresses are different like the instructions said they might be!
+
+"db 0x557d0d604612"
+
+"db 0x557d0d604618"
+
+"dc"
+
+"dr" will show the value of the registers"
+
+"px @rbp-0x4"
 
 
 
