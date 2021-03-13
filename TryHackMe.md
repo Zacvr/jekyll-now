@@ -17,3 +17,5 @@ This will be a "how to" guide for the Try Hack Me Challenges!
 [Blue](https://zacvr.github.io//Tutorials/TryHackMe/Blue)
 <br/>
 [Ice](https://zacvr.github.io//Tutorials/TryHackMe/Ice)
+<br/>
+[Intro To x86-64](https://zacvr.github.io//Tutorials/TryHackMe/IntroTox86-64)
