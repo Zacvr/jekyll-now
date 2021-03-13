@@ -117,6 +117,18 @@ Oh wait! our hex addresses are different like the instructions said they might b
 
 "px @rbp-0x4"
 
+Now this is not going as planned... lets try it with our flags that we need!
+
+"exit
+
+y
+
+y"
+
+"ls"
+
+"r2 -d if2"
+
 
 
 
