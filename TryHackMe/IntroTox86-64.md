@@ -135,7 +135,7 @@ y"
 
 alright
 
-<img src="/images/TryHackMe/IntroTox86/1.PNG">
+<img src="/images/TryHackMe/IntroTox86/Task 4 Info.PNG">
 
 We see that I need to put a stop at 0x55ecb353f637 to find the value of var_8h before popq
 
@@ -148,6 +148,7 @@ We now use "px @rbp-0x8" since we need that var (var_8h)
 <img src="/images/TryHackMe/IntroTox86/Task 4-1.PNG">
 
 We can see here that the offset is 60; If we convert this on any website such as
+
 [Hex To Decimal](https://www.rapidtables.com/convert/number/hex-to-decimal.html)
 
 60=96 in decimal
