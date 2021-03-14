@@ -388,7 +388,7 @@ Task 7!
 
 "aaa"
 
-pdf @main"
+"pdf @main"
 
 This shows a file in the home directory!
 
