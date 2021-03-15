@@ -227,7 +227,9 @@ For me that was
 "db  0x55bf4fd8a613"
 
 "ds"
+
 ***(I later realized I did ds not dc)***
+
 "pdf @main"
 
 This was the point it stopped working well so lets just jump to the challenge!
