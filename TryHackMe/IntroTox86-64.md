@@ -424,6 +424,8 @@ Lets check in on those variables named rdi and rax
 
 This shows 127.0.1 while our answer is ```***.*.*.*``` lets try ***127.0.0.1***
 
+I assume I was one step to little or maybe to far but I tried again with the sam result even with doing 4 breaks at each step before this one
+
 
 Task 7!
 
