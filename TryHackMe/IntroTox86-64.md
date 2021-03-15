@@ -13,6 +13,27 @@ Flags will be **BOLD**
 <br/><br/>
 <br/><br/>
 
+First lets find the IP in the subnet!
+
+
+"nmap -n -sn 10.10.113.0-255" 
+
+<img src="/images/TryHackMe/IntroTox86/IP.PNG">
+
+"nmap -Pn -F 10.10.113.48,114,123,183,226"
+
+<img src="/images/TryHackMe/IntroTox86/IP Results.PNG">
+
+Now lets try to login with our ssh creds on ach IP since they all have SSH
+
+"ssh tryhackme@10.10.113.114"
+
+"reismyfavl33t"
+
+was the one to work for me
+
+
+
 
 For this challenge we will play with some coding
 
@@ -377,10 +398,31 @@ Lets check the variables again
 "px @rbp-0x54"
 (fails across the board only my password)
 
+After a day of thinking and some help lets try again since from what I learned we were very close!
 
+"cd crackme"
 
+"r2 -d crackme1"
 
+"aaa"
 
+"pdf @main"
+
+<img src="/images/TryHackMe/IntroTox86/Task 6 Attack Plan.PNG">
+
+We are going to try at the same place as before!
+
+"db 0x5592754318a4"
+
+"dc"
+
+Lets check in on those variables named rdi and rax
+
+"px @ rsi"
+
+<img src="/images/TryHackMe/IntroTox86/Task 6 Done.PNG">
+
+This shows 127.0.1 while our answer is ```***.*.*.*``` lets try ***127.0.0.1***
 
 
 Task 7!
