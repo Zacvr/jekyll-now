@@ -416,7 +416,7 @@ We are going to try at the same place as before!
 
 "dc"
 
-Lets check in on those variables named rdi and rax
+Lets check in on those variables named rsi, rdi and rax
 
 "px @ rsi"
 
