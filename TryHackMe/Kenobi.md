@@ -102,6 +102,20 @@ We now need to findout how many exploits are there for ProFtpd that is running
 
 **3** we see 3 with check as "Yes" possibly this is why 3 is correct?
 
+Now lets continue along
+
+```sudo mkdir /mnt/kenobiNFS```
+
+```sudo mount 10.10.130.11:/var /mnt/kenobiNFS```
+
+```ls -la /mnt/kenobiNFS```
+
+Now in theory we should have a network mount that we can find the key for the login
+
+
+
+
+
 
 
 
