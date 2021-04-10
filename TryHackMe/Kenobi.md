@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Intro To x86-64
-permalink: /Tutorials/TryHackMe/IntroTox86-64/
+title: Kenobi
+permalink: /Tutorials/TryHackMe/Kenobi/
 ---
 
 [TryHackMe Directory](https://zacvr.github.io/Tutorials/TryHackMe/)
