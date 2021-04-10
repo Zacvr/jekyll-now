@@ -24,7 +24,7 @@ Lets scan them in order and try to figureout the total ports open
 
 ```nmap 10.10.130.11```
 
-<img src="/images/TryHackMe/IntroTox86/IP Ports.PNG">
+<img src="/images/TryHackMe/IntroTox86/IPPorts.PNG">
 
 **7** is the answer to the first question!
 
