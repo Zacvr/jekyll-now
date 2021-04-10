@@ -31,6 +31,82 @@ Lets scan them in order and try to figureout the total ports open
 TASK 2
 ----
 
+It now tells us to run a script for nmap to enumerate shares
+
+```nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.130.11```
+
+<img src="/images/TryHackMe/IntroTox86/Enum_Shares.PNG">
+
+**3** Shares is the first answer in task 2
+
+lets follow their lesson
+
+```smbclient //10.10.130.11/anonymous```
+
+```Press "Enter"```
+
+We are now inside
+
+we need to view the files now
+
+```ls```
+
+<img src="/images/TryHackMe/IntroTox86/Files.PNG">
+
+**log.txt** is the answer to the second question!
+
+we are making great progress lets keep going
+
+```smbget -R smb://10.10.130.11/anonymous```
+
+```press "Enter"```
+
+<img src="/images/TryHackMe/IntroTox86/Download.PNG">
+
+We now have a file! Why don't we open it?
+
+```cat log.txt```
+
+Lets look for that FTP port shall we
+
+<img src="/images/TryHackMe/IntroTox86/FTP.PNG">
+
+**21** is the FTP port according to the top of this document
+
+This tutorial has another script to run
+
+```nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.10.130.11```
+
+<img src="/images/TryHackMe/IntroTox86/Var.PNG">
+
+**/var** is the final answer in task 2!
+
+Task 3
+----
+
+We are told to to find the version of ProFtpd the machine is running on the FTP port
+
+```netcat 10.10.130.11 21```
+
+<img src="/images/TryHackMe/IntroTox86/ProFtpd.PNG">
+
+**1.3.5** is our first answer in task 3
+
+We now need to findout how many exploits are there for ProFtpd that is running
+
+```msfconsole```
+
+```search ProFtpd```
+
+<img src="/images/TryHackMe/IntroTox86/Checking.PNG">
+
+**3** we see 3 with check as "Yes" possibly this is why 3 is correct?
+
+
+
+
+
+
 
 
 <img src="/images/TryHackMe/IntroTox86/Task 7.PNG">
