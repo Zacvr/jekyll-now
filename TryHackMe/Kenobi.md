@@ -16,19 +16,20 @@ Flags will be **BOLD**
 First lets find the IP in the subnet!
 
 
-```nmap -n -sn 10.10.113.0-255```
+```nmap -n -sn 10.10.130.0-255```
 
-<img src="/images/TryHackMe/IntroTox86/IP.PNG">
+<img src="/images/TryHackMe/Kenobi/IPs.PNG">
 
-"nmap -Pn -F 10.10.113.48,114,123,183,226"
+Lets scan them in order and try to figureout the total ports open
 
-<img src="/images/TryHackMe/IntroTox86/IP Results.PNG">
+```nmap 10.10.130.11```
 
-Now lets try to login with our ssh creds on ach IP since they all have SSH
+<img src="/images/TryHackMe/IntroTox86/IP Ports.PNG">
 
-"ssh tryhackme@10.10.113.114"
+**7** is the answer to the first question!
 
-"reismyfavl33t"
+TASK 2
+----
 
 
 
