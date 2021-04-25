@@ -23,3 +23,5 @@ This will be a "how to" guide for the Try Hack Me Challenges!
 [Kenobi](https://zacvr.github.io//Tutorials/TryHackMe/Kenobi)
 <br/>
 [WiFiHacking101](https://zacvr.github.io//Tutorials/TryHackMe/WiFiHacking101)
+<br/>
+[OWASP Juice Shop](https://zacvr.github.io//Tutorials/TryHackMe/OWASPJuiceShop)
