@@ -62,7 +62,7 @@ Question 1 asks what tool can enumerate port 139 & 445
 
 A qucik google search lets me know that the answer is
 
-<img src="/images/TryHackMe/AttacktiveDirectory/Task3-Question1.PNG">
+<img src="/images/TryHackMe/AttacktiveDirectory/Task3-Question1.png">
 
 **Enum4Linux**
 
@@ -74,7 +74,7 @@ Well lets try Enum4Linux
 
 About 30 seconds in I saw a domain name which should be the NetBIOS-Domain Name as well
 
-<img src="/images/TryHackMe/AttacktiveDirectory/DomainName.PNG">
+<img src="/images/TryHackMe/AttacktiveDirectory/DomainName.png">
 
 **THM-AD**
 
@@ -110,7 +110,7 @@ I pasted in the Userlist and I will then do the same with the passwords
 
 For Question 1 I needed to "cheat" the help log showed me nothing of use
 
-<img src="/images/TryHackMe/AttacktiveDirectory/Kerbrute.PNG">
+<img src="/images/TryHackMe/AttacktiveDirectory/Kerbrute.png">
 
 Apparently the answer was
 
@@ -146,7 +146,7 @@ the "-t 100 made it go much faster!
 
 **backup**
 
-<img src="/images/TryHackMe/AttacktiveDirectory/KerbruteNames.PNG">
+<img src="/images/TryHackMe/AttacktiveDirectory/KerbruteNames.png">
 
 We made it!
 
