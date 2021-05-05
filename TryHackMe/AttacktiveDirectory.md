@@ -18,13 +18,13 @@ First lets find the IP in the subnet!
 
 ```nmap -n -sn 10.10.185.0-255```
 
-<img src="/images/TryHackMe/AttacktiveDirectory/IPs.PNG">
+<img src="/images/TryHackMe/AttacktiveDirectory/IPs.png">
 
 Lets scan them in order and try to figureout the total ports open
 
 ```nmap 10.10.185.18```
 
-<img src="/images/TryHackMe/AttacktiveDirectory/IPPorts.PNG">
+<img src="/images/TryHackMe/AttacktiveDirectory/IPPorts.png">
 
 After looking at the ports that are open 112 has a domain service on 53 which makes sense for this challenge as well as a kerberos-sec on 88
 
