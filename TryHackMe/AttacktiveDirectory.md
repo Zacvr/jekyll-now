@@ -28,6 +28,9 @@ Lets scan them in order and try to figureout the total ports open
 
 After looking at the ports that are open 112 has a domain service on 53 which makes sense for this challenge as well as a kerberos-sec on 88
 
+
+
+
 Task 2
 ---
 
@@ -55,6 +58,9 @@ Apparently we finally need to install Bloodhound & Neo4j
 
 ```sudo apt install bloodhound neo4j```
 
+
+
+
 Task 3
 ---
 
@@ -65,6 +71,9 @@ A qucik google search lets me know that the answer is
 <img src="/images/TryHackMe/AttacktiveDirectory/Task3-Question1.png">
 
 **Enum4Linux**
+
+
+
 
 Question 2 asks "What is the NetBIOS-Domain Name of the machine?"
 
@@ -78,11 +87,16 @@ About 30 seconds in I saw a domain name which should be the NetBIOS-Domain Name 
 
 **THM-AD**
 
+
+
+
 Question 3 asks "What invalid TLD do people commonly use for their Active Directory Domain?"
 
 With having a few hints as to the Top Level Domain (TLD) already and the hint telling us "Spoiler: The full AD domain is spookysec.local" This lets me know that the answer should be
 
 **.local**
+
+
 
 
 Task 4
@@ -116,6 +130,9 @@ Apparently the answer was
 
 **userenum**
 
+
+
+
 Question 2 asks "What notable account is discovered? (These should jump out at you)"
 
 After some fumbling I tried this command
@@ -136,6 +153,8 @@ The answer to Question 2 should be svc-admin since that is not a normal name
 **svc-admin**
 
 
+
+
 Question 3 asks "What is the other notable account is discovered? (These should jump out at you)"
 
 After waiting I realized something must be wrong when one walkthrough showed the names only taking seconds apart not minutes
@@ -149,6 +168,8 @@ the "-t 100 made it go much faster!
 <img src="/images/TryHackMe/AttacktiveDirectory/KerbruteNames.png">
 
 
+
+
 Task 5
 ---
 
@@ -159,6 +180,8 @@ This is simple due to 1 user looking different it shows "[NOT PREAUTH]"
 <img src="/images/TryHackMe/AttacktiveDirectory/PreAuth.png">
 
 **svc-admin**
+
+
 
 
 Question 2 For the hashs we need to run "GetNPUsers.py" on svc-admin
@@ -176,11 +199,15 @@ If we search "krb5asrep" we will find the Hashtype
 **Kerberos 5 AS-REP etype 23**
 
 
+
+
 Question 3
 
 That previous picture shows the hash mode on the far left
 
 **18200**
+
+
 
 
 Question 4 requires us to use hashcat to crack the hash
@@ -200,12 +227,16 @@ We found our answer quite quickly! If you look right at the end of the hash we s
 **management2005**
 
 
+
+
 Task 6
 ---
 
 Question 1 The hint gives away the answer
 
 **smbclient**
+
+
 
 
 Question 2 asks "Which option will list shares?"
@@ -215,6 +246,8 @@ Question 2 asks "Which option will list shares?"
 <img src="/images/TryHackMe/AttacktiveDirectory/LHost.png">
 
 **-L**
+
+
 
 
 Question 3 asks "How many remote shares is the server listing?"
@@ -234,6 +267,8 @@ We now see
 **6** remote shares
 
 
+
+
 Question 4 asks us to find which share has a text file inside
 
 Lets look into the one without a comment
@@ -243,6 +278,11 @@ Lets look into the one without a comment
 ```ls```
 
 <img src="/images/TryHackMe/AttacktiveDirectory/Backup.png">
+
+**backup**
+
+
+
 
 Question 5 wants the contents of that file
 
@@ -258,6 +298,9 @@ We need to use "get" since cat and nano wont read the file
 
 **YmFja3VwQHNwb29reXNlYy5sb2NhbDpiYWNrdXAyNTE3ODYw**
 
+
+
+
 Now we need to decode the contents
  
 We can use [CyberChef](https://gchq.github.io/CyberChef/) to try several choices
@@ -267,6 +310,8 @@ It looks like this was base64
 <img src="/images/TryHackMe/AttacktiveDirectory/CyberChef.png">
 
 **backup@spookysec.local:backup2517860**
+
+
 
 
 Task 7
@@ -296,6 +341,8 @@ We now have our answer!
 **DRSUAPI**
 
 
+
+
 Question 2 asks "What is the Administrators NTLM hash?"
 
 Lets grep again for just the "Administrator" account lines
@@ -310,11 +357,14 @@ If you look at the second half of the top line that has "500" in it we see the a
 
 
 
+
 Question 3 asks "What method of attack could allow us to authenticate as the user without the password?"
 
 This is a quick and simple google search away
 
 **pass the hash**
+
+
 
 
 Question 4 asks "Using a tool called Evil-WinRM what option will allow us to use a hash?"
@@ -334,11 +384,14 @@ We see the answer!
 **-H**
 
 
+
+
 Task 8
 
 Now we need to just view each accounts dekstop to find the flags
 
 We can use Evil-WinRM for this with the hashes we have!
+
 
 
 
@@ -357,6 +410,8 @@ Lets go to the C:\Users folder (Do Question 3 First)
 **TryHackMe{K3rb3r0s_Pr3_4uth}**
 
 
+
+
 Question 2 is for backup
 
 Lets go to the C:\Users folder (Do Question 3 First)
@@ -370,6 +425,8 @@ Lets go to the C:\Users folder (Do Question 3 First)
 <img src="/images/TryHackMe/AttacktiveDirectory/backupFlag.png">
 
 **TryHackMe{B4ckM3UpSc0tty!}**
+
+
 
 
 Question 3 is for Administrator
