@@ -27,3 +27,5 @@ This will be a "how to" guide for the Try Hack Me Challenges!
 [OWASP Juice Shop](https://zacvr.github.io//Tutorials/TryHackMe/OWASPJuiceShop)
 <br/>
 [Attacktive Directory](https://zacvr.github.io//Tutorials/TryHackMe/AttacktiveDirectory)
+<br/>
+[MiroLabsCapstone](https://zacvr.github.io//Tutorials/TryHackMe/MiroLabsCapstone)
