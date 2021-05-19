@@ -25,7 +25,7 @@ First lets find the correct IP
 
 ```nmap -n -sn 10.10.77.0-255```
 
-<img src="/images/TryHackMe/MiroLabsCapstone/IPs.PNG">
+<img src="/images/TryHackMe/MiroLabsCapstone/IPs.png">
 
 Looks like we have 2 possible choices, lets look into them
 
@@ -33,7 +33,7 @@ Looks like we have 2 possible choices, lets look into them
 
 ```nmap 10.10.77.141```
 
-<img src="/images/TryHackMe/MiroLabsCapstone/IP_Results.PNG">
+<img src="/images/TryHackMe/MiroLabsCapstone/IP_Results.png">
 
 Lets go with the "basic" IP of 78 due to having 3 common exploitable port types
 
@@ -48,7 +48,7 @@ Now lets try to see what is running
 
 ```nmap -Pn -sV 10.10.77.78```
 
-<img src="/images/TryHackMe/MiroLabsCapstone/Services.PNG">
+<img src="/images/TryHackMe/MiroLabsCapstone/Services.png">
 
 Well this looks like it could be promising... Lets lookup that ProFTPD version
 
@@ -56,7 +56,7 @@ Well this looks like it could be promising... Lets lookup that ProFTPD version
 
 ```search ProFTPD 1.3.3c```
 
-<img src="/images/TryHackMe/MiroLabsCapstone/Exploit.PNG">
+<img src="/images/TryHackMe/MiroLabsCapstone/Exploit.png">
 
 We see that we may have a backdoor command we can try
 
@@ -66,7 +66,7 @@ We see that we may have a backdoor command we can try
 
 ```show options```
 
-<img src="/images/TryHackMe/MiroLabsCapstone/Show.PNG">
+<img src="/images/TryHackMe/MiroLabsCapstone/Show.png">
 
 Lets try to run it!
 
@@ -74,7 +74,7 @@ Lets try to run it!
 
 Annnnnnddddd..... Fail...hmmmm lets look this up
 
-<img src="/images/TryHackMe/MiroLabsCapstone/RunFail.PNG">
+<img src="/images/TryHackMe/MiroLabsCapstone/RunFail.png">
 
 (This Link)[Https://nmap.org/nsedoc/scripts/ftp-proftpd-backdoor.html]  This link shows a possible answer
 
@@ -82,7 +82,7 @@ Annnnnnddddd..... Fail...hmmmm lets look this up
 
 ```nmap --script ftp-proftpd-backdoor -p 21 10.10.77.78```
 
-<img src="/images/TryHackMe/MiroLabsCapstone/Backdoor.PNG">
+<img src="/images/TryHackMe/MiroLabsCapstone/Backdoor.png">
 
 Well.. Yay? that was a bit anticlimactic... Now how do we use it?
 
