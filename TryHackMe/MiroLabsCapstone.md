@@ -86,9 +86,9 @@ Annnnnnddddd..... Fail...hmmmm lets look this up
 
 Well.. Yay? that was a bit anticlimactic... Now how do we use it?
 
-
-
-
-
+After a new connection we have a new IP 10..10.38.231
+  
+More connection issues.. lets reboot
+ 
 <br/><br/>
 [TryHackMe Directory](https://zacvr.github.io/Tutorials/TryHackMe/)
