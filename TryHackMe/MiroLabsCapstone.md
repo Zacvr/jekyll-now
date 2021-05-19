@@ -104,6 +104,8 @@ Whelp thats not working time to try another path
 
 ```search proftp```
 	
+<img src="/images/TryHackMe/MiroLabsCapstone/Choices.png">
+	
 ```use 6```
 	
 ```set RHOST 10.10.144.237```
