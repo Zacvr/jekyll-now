@@ -123,7 +123,7 @@ Now I see we need to select a payload
 	
 ```Show Payloads```
 
-<img src="/images/TryHackMe/MiroLabsCapstone/RunFail.png">
+<img src="/images/TryHackMe/MiroLabsCapstone/Payloads.png">
 
 ```set payload cmd/unix/bind_perl```
 
