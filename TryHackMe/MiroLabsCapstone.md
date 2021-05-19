@@ -76,7 +76,7 @@ Annnnnnddddd..... Fail...hmmmm lets look this up
 
 <img src="/images/TryHackMe/MiroLabsCapstone/RunFail.png">
 
-(This Link)[Https://nmap.org/nsedoc/scripts/ftp-proftpd-backdoor.html]  This link shows a possible answer
+[This Link](Https://nmap.org/nsedoc/scripts/ftp-proftpd-backdoor.html)  This link shows a possible answer
 
 **nmap --script ftp-proftpd-backdoor -p 21 <host>**
 
