@@ -1,6 +1,7 @@
 ---
 layout: page
-title: CSCI24
+title: CSCI 24
+Taught by C1ph0r (Ed)
 permalink: /CSCI24/
 ---
 Welcome to CSCI 24 taught by the one, the only C1ph0r himself!
