@@ -215,6 +215,104 @@ Which common OS may respond to a NULL, FIN or Xmas scan with a RST for every por
 ***Microsoft Windows***
 
 
-Task 8
+Task 9
 ---
 
+How would you perform a ping sweep on the 172.16.x.x network (Netmask: 255.255.0.0) using Nmap? (CIDR notation)
+
+***nmap -sn 172.16.0.0/16***
+
+
+Task 10
+---
+
+What language are NSE scripts written in?
+
+***Lua***
+
+
+Which category of scripts would be a very bad idea to run in a production environment?
+
+***Intrusive***
+
+
+Task 11
+---
+
+What optional argument can the ftp-anon.nse script take?
+
+***Maxlist***
+
+
+Task 12
+---
+
+Search for "smb" scripts in the /usr/share/nmap/scripts/ directory using either of the demonstrated methods.
+What is the filename of the script which determines the underlying OS of the SMB server?
+
+```grep "SMB" /usr/share/nmap/scripts/script.db```
+
+***smb-os-discovery.nse***
+
+Read through this script. What does it depend on?
+
+```grep "depend" /usr/share/nmap/scripts/smb-os-discovery.nse```
+
+<img src="/images/CSCI24/FurtherNMap/Task 12 Q2.png">
+
+***smb-brute***
+
+
+Task 13
+---
+
+Which simple (and frequently relied upon) protocol is often blocked, requiring the use of the -Pn switch?
+
+***ICMP***
+
+
+[Research] Which Nmap switch allows you to append an arbitrary length of random data to the end of packets?
+
+***--data-length***
+
+
+Task 14
+---
+
+Does the target (MACHINE_IP)respond to ICMP (ping) requests (Y/N)?
+
+***N***
+
+
+Perform an Xmas scan on the first 999 ports of the target -- how many ports are shown to be open or filtered?
+
+```sudo nmap -p1-999 -Pn -sX 10.10.67.180 -vv```
+
+<img src="/images/CSCI24/FurtherNMap/Task 14 Q2.png">
+
+***999***
+
+
+There is a reason given for this -- what is it?
+
+Note: The answer will be in your scan results. Think carefully about which switches to use -- and read the hint before asking for help!
+
+***no response***
+
+
+Perform a TCP SYN scan on the first 5000 ports of the target -- how many ports are shown to be open?
+
+```sudo nmap -p1-5000 -Pn -sS 10.10.67.180 -vv```
+
+<img src="/images/CSCI24/FurtherNMap/Task 14 Q4.png">
+
+***5***
+
+
+Deploy the ftp-anon script against the box. Can Nmap login successfully to the FTP server on port 21? (Y/N)
+
+```sudo nmap --script=ftp-anon.nse -p21 -Pn 10.10.67.180 -vv```
+
+<img src="/images/CSCI24/FurtherNMap/Task 14 Q6.png">
+
+***Y***
