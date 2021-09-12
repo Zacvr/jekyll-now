@@ -39,27 +39,25 @@ Task 3
 
 <br/><br/>
 Time to use
-***Nmap -H*** for our answers
-<br/><br/>
+```Nmap -H``` for our answers
 
 
 What is the first switch listed in the help menu for a 'Syn Scan' (more on this later!)?
-<br/>
+
 ```nmap -h | grep scan```
-<br/>
+
 <img src="/images/CSCI24/FurtherNMap/Task 3 Q1.png">
-<br/>
+
 ***-sS***
-<br/>
 
 
 Which switch would you use for a "UDP scan"?
 ```nmap -h | grep UDP```
-<br/>
 
-<br/>
+
+
 ***-sU***
-<br/>
+
 
 
 If you wanted to detect which operating system the target is running on, which switch would you use?
