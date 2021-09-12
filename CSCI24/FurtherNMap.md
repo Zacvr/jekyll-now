@@ -13,7 +13,7 @@ permalink: /CSCI24/FurtherNMap/
 <br/>
 
 Task 2
--
+---
 
 <br/><br/>
 What networking constructs are used to direct traffic to the right application on a server?
@@ -30,6 +30,7 @@ A quick google shows port 0-1023 as well known so
 <br/>
 ***1024***
 <br/><br/>
+
 Task 3
 ---
 <br/><br/>
