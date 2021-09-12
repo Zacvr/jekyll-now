@@ -33,10 +33,13 @@ A quick google shows port 0-1023 as well known so
 
 Task 3
 ---
+
 <br/><br/>
 Time to use
 ***Nmap -H*** for our answers
 <br/><br/>
+
+
 What is the first switch listed in the help menu for a 'Syn Scan' (more on this later!)?
 <br/>
 ```nmap -h | grep scan```
@@ -45,9 +48,17 @@ What is the first switch listed in the help menu for a 'Syn Scan' (more on this 
 <br/>
 ***-sS***
 <br/>
+
+
 Which switch would you use for a "UDP scan"?
+```nmap -h | grep UDP```
+<br/>
 
 <br/>
+***-sU***
+<br/>
+
+
 If you wanted to detect which operating system the target is running on, which switch would you use?
 
 <br/>
