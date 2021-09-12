@@ -14,6 +14,7 @@ permalink: /CSCI24/FurtherNMap/
 
 Task 2
 ---
+
 <br/><br/>
 What networking constructs are used to direct traffic to the right application on a server?
 <br/>
@@ -36,9 +37,12 @@ Time to use
 ***Nmap -H*** for our answers
 <br/><br/>
 What is the first switch listed in the help menu for a 'Syn Scan' (more on this later!)?
+<br/>
 ```nmap -h | grep scan```
+<br/>
 <img src="/images/CSCI24/FurtherNMap/Task 3 Q1.png">
--sS
+<br/>
+***-sS***
 <br/>
 Which switch would you use for a "UDP scan"?
 
