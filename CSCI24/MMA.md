@@ -25,7 +25,7 @@ What technology does this worm used to multiply?
 
 What operating system did it infect?
 
-***Symbian
+***Symbian***
 
 What message did it show on the screen of the infected mobile phone?
 
