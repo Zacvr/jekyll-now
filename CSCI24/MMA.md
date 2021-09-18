@@ -70,6 +70,8 @@ Task 4
 
 We need to get the has with "Get-FileHash" or from within MobSF
 
+<img src="/images/CSCI24/MMA/Task 4 Q1.png">
+
 Our hash is "E201A1D2CECF1D04D97D59ABEC0863C716DCF9FCAD89B85D036F9163A48057E7"
 
 Lets go to Virus Total and search the has!
@@ -225,17 +227,21 @@ Lets search "Pegasus" and look for an android based link
 
 What technique has the ability to exploit OS vulnerabilities to escalate privileges? 
 
-***
+***T1404***
 
 
 There is a permission that when accepted, allows the application to access the list of accounts in the Accounts Service. What is the status shown by MobSF regarding this permission. (android.permission.GET.ACCOUNTS)
 
-***
+***Dangerous***
 
 
 What org.eclipse.paho.client file refers to properties of Portuguese from Brazil (pt-br)?
 
-***
+***org/eclipse/paho/client/mqttv3/internal/nls/messages_pt_BR.properties***
 
 
 The malware has a special appeal for its safety and its internal components, reducing the risk of compromise. It has a functionality for its cryptographic operations with the feature of a random bit generation service. How can it be identified?
+
+The Hint tells us to look into NIAP analysis, after some searching in the sidebar under "Secuirty Analysis" we can find it
+
+***FCS_RBG_EXT.1.1***
