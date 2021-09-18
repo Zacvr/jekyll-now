@@ -42,57 +42,81 @@ We are going to use the built in VM browser that opens in THM
 
 What is the format of the file?
 
-
+***.APK***
 
 
 Decode the name of the sample.
 
+We will use hURL to decode (you can also use CyberChef)
 
+```hURL -b "TWFsd2FyZQ"```
+
+<img src="/images/CSCI24/FurtherNMap/Task 3 Q4.png">
+
+
+***Malware***
 
 
 Which is the target platform?
+
+If we scroll down we can see "Android" listed in various places
+
+***Android***
 
 ---
 
 Task 4
 ---
 
+We need to get the has with "Get-FileHash" or from within MobSF
+
+Our hash is "E201A1D2CECF1D04D97D59ABEC0863C716DCF9FCAD89B85D036F9163A48057E7"
+
+Lets go to Virus Total and search the has!
 
 What does Avast-Mobile can tell us about this software?
 
+***Android:Metasploit-G [PUP]***
 
+***For this answer AVAST was the answer not Avast-Mobile***
 
 
 What program was used to create the malware?
 
-
+***metasploit***
 
 
 What is the package name?
 
-
-
+***com.metasploit.stage***
 
 
 What is the SHA-1 signature?
 
+***74d442594acf11dc6e3492ffea5eb8956afd000d***
 
 
 What is the unique XML file?
 
-
+***AndroidManifest.xml***
 
 
 
 How many permissions are there inside?
 
+If we click the SHA-256 of that XML file it will show it has 22 permissions
 
+***22***
 
 
 Which permission allows the application to take pictures with the camera?
 
+***android.permission.CAMERA***
+
 
 What is the message left by the community?
+
+***THM{V1ru5-T0t4al-TWFsd2FyZS1BbmFseXNpcw}***
 
 
 ---
@@ -188,56 +212,4 @@ The malware has a special appeal for its safety and its internal components, red
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br/><br/>
-What networking constructs are used to direct traffic to the right application on a server?
-
-***Ports***
-
-
-How many of these are available on any network-enabled computer?
-
-***65535***
-
-
-
-[Research] How many of these are considered "well-known"? (These are the "standard" numbers mentioned in the task)
-
-A quick google shows port 0-1023 as well known so
-
-***1024***
-
-
-Task 3
----
-
-<br/><br/>
-Time to use ```Nmap -H``` for our answers
-
-
-What is the first switch listed in the help menu for a 'Syn Scan' (more on this later!)?
-
-```nmap -h | grep scan```
-
-<img src="/images/CSCI24/FurtherNMap/Task 3 Q1.png">
-
-***-sS***
 
