@@ -52,7 +52,7 @@ Decode the name of the sample.
 
 Which is the target platform?
 
-
+---
 
 Task 4
 ---
@@ -95,7 +95,7 @@ Which permission allows the application to take pictures with the camera?
 What is the message left by the community?
 
 
-
+---
 
 Task 5
 ---
@@ -129,7 +129,7 @@ What is the App name?
 It looks like  there is a function calling for the package manager, so it can see all the installed applications. What function is that?
 
 
-
+---
 
 Task 6
 ---
