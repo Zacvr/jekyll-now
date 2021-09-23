@@ -17,7 +17,7 @@ Known by Ed to the uninitiated come and join us on this adventure into CASP+
 <br/><br/>
 [THM Further NMap](https://zacvr.github.io/CSCI24/FurtherNMap/)
 <br/><br/>
-[THM MMA](https://zacvr.github.io/CSCI24/MMA/)
+[THM Mobile Malware Analysis](https://zacvr.github.io/CSCI24/MMA/)
 <br/><br/>
-
+[THM OWASP Top 10](https://zacvr.github.io/CSCI24/OWASPTop10/)
 <br/><br/>
