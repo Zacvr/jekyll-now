@@ -12,35 +12,49 @@ permalink: /CSCI24/OWASPTop10/
 ---
 <br/>
 
-<img src="/images/CSCI24/OWASPTop10/Task 5 Q.png">
-
 
 Task 5
 ---
 
 What strange text file is in the website root directory?
 
-***
+If we search with ls we will see the files in the root directory
+
+```ls```
+
+<img src="/images/CSCI24/OWASPTop10/Task 5 Q1.png">
+
+***drpepper.txt***
 
 How many non-root/non-service/non-daemon users are there?
 
-***
+```cat /etc/passwd```
+
+***0***
 
 What user is this app running as?
 
-***
+```whoami```
+
+***www-data ***
 
 What is the user's shell set as?
 
-***
+```cat /etc/passwd```
+
+***/usr/sbin/nologin***
 
 What version of Ubuntu is running?
 
-***
+```lsb_release -a```
+
+***18.04.4***
 
 Print out the MOTD.  What favorite beverage is shown?
 
-***
+```cat /etc/update-motd.d/00-header```
+
+***Dr Pepper*** Shocker right?
 
 Task 7
 ---
