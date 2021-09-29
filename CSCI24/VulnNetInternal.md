@@ -1,7 +1,7 @@
 ---
 layout: page
-title: OWASP Top 10
-permalink: /CSCI24/OWASPTop10/
+title: VulnNet: Internal
+permalink: /CSCI24/VulnNetInternal/
 ---
 
 ---
