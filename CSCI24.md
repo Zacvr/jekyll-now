@@ -21,3 +21,5 @@ Known by Ed to the uninitiated come and join us on this adventure into CASP+
 <br/><br/>
 [THM OWASP Top 10](https://zacvr.github.io/CSCI24/OWASPTop10/)
 <br/><br/>
+[VulnNet: Internal](https://zacvr.github.io/CSCI24/VulnNetInternal/)
+<br/><br/>
