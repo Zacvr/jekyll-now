@@ -199,15 +199,22 @@ Task 18
 
 Look at other users notes. What is the flag?
 
-***
+After we login if we change "note=1" to "note=0"
+
+***flag{fivefourthree}***
 
 
 Task 19
 ---
 
+After some testing of default passwords (admin/password/blank etc) with no luck I decided to lookup Pensive Notes default passwords and found
+
+```user:pensive```
+```pass:PensiveNotes```
+
 Hack into the webapp, and find the flag!
 
-***
+***thm{4b9513968fd564a87b28aa1f9d672e17}***
 
 
 Task 20
@@ -215,32 +222,41 @@ Task 20
 
 Navigate to http://MACHINE_IP/ in your browser and click on the "Reflected XSS" tab on the navbar; craft a reflected XSS payload that will cause a popup saying "Hello".
 
-***
+above we see that we can use "<script>alert(“Hello”)</script>" to create popups
+
+<img src="/images/CSCI24/OWASPTop10/Task 20 Q1.png">
+
+***ThereIsMoreToXSSThanYouThink***
 
 
 On the same reflective page, craft a reflected XSS payload that will cause a popup with your machines IP address.
 
-***
+```<script>alert(window.location.hostname)</script>```
+
+***ReflectiveXss4TheWin***
 
 
 Now navigate to http://MACHINE_IP/ in your browser and click on the "Stored XSS" tab on the navbar; make an account.
 
-***
-
-
 Then add a comment and see if you can insert some of your own HTML.
 
-***
+```<h1>Mic Test</h1>```
+
+***HTML_T4gs***
 
 
 On the same page, create an alert popup box appear on the page with your document cookies.
 
-***
+```<script>alert(document.cookie)</script>```
+
+***W3LL_D0N3_LVL2***
 
 
 Change "XSS Playground" to "I am a hacker" by adding a comment and using Javascript.
 
-***
+```<script>document.querySelector('#thm-title').textContent = 'I am a hacker'</script>```
+
+***websites_can_be_easily_defaced_with_xss***
 
 
 Task 21
@@ -248,12 +264,12 @@ Task 21
 
 Who developed the Tomcat application?
 
-***
+***The Apache Software Foundation***
 
 
 What type of attack that crashes services can be performed with insecure deserialization?
 
-***
+***Denial of Service***
 
 
 Task 22
@@ -265,7 +281,7 @@ if a dog was sleeping, would this be:
 A) A State
 B) A Behaviour 
 
-***
+***A behaviour***
 
 
 Task 23
@@ -273,7 +289,7 @@ Task 23
 
 What is the name of the base-2 formatting that data is sent across a network as? 
 
-***
+***Binary***
 
 
 Task 24
@@ -281,12 +297,12 @@ Task 24
 
 If a cookie had the path of webapp.com/login , what would the URL that the user has to visit be?
 
-***
+***webapp.c om/login***
 
 
 What is the acronym for the web technology that Secure cookies work over?
 
-***
+***HTTPS***
 
 
 Task 25
@@ -294,12 +310,15 @@ Task 25
 
 1st flag (cookie value)
 
-***
+One cookie is in Base64
+"0TU5YzUxYTA2NjY3NGI0OWEzZWM5MDk4ZTU1ODlkMGNxAlgLAAAAZW5jb2RlZGZsYWdxA1gYAAAAVEhNe2dvb2Rfb2xkX2Jhc2U2NF9odWh9cQR1Lg=="
+
+***THM{good_old_base64_huh)***
 
 
 2nd flag (admin dashboard)
 
-***
+***THM{heres_the_admin_flag}***
 
 
 Task 26
@@ -307,15 +326,21 @@ Task 26
 
 flag.txt
 
-***
+This one would not work correctly for me
+
+***4a69a7ff9fd68***
 
 
 Task 29
 ---
 
+After searching bookstore app rce we foudn an exploit
+
+```python3 bookstore_rce.py 10.10.64.138```
+
 How many characters are in /etc/passwd (use wc -c /etc/passwd to get the answer)
 
-***
+***1611***
 
 
 Task 30
@@ -323,10 +348,10 @@ Task 30
 
 What IP address is the attacker using?
 
-***
+***49.99.13.16***
 
 
 What kind of attack is being carried out?
 
-***
+***Brute Force***
 
