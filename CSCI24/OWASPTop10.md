@@ -61,88 +61,138 @@ Task 7
 
 What is the flag that you found in darren's account?
 
-***
+If we try to register a name of " darren" (with the quotes) we can then login as " darren" without the quotes but with the space 
+
+<img src="/images/CSCI24/OWASPTop10/Task 7 Q1.png">
+
+***fe86079416a21a3c99937fea8874b667***
+
 
 Now try to do the same trick and see if you can login as arthur.
-
-***
-
 What is the flag that you found in arthur's account?
 
-***
+***d9ac0f7db4fda460ac3edeb75d75e16e***
+
 
 Task 11
 ---
 
+After quite a few minutes of not realizing that I needed to boot up a different machine we are finally ready!
+
+Lets look at the source of the login page
+
+<img src="/images/CSCI24/OWASPTop10/Task 11 Q1.png">
+
 What is the name of the mentioned directory?
 
-***
+***/assets***
+
 
 Navigate to the directory you found in question one. What file stands out as being likely to contain sensitive data?
 
-***
+
+<img src="/images/CSCI24/OWASPTop10/Task 11 Q2.png">
+
+***webapp.db***
+
 
 Use the supporting material to access the sensitive data. What is the password hash of the admin user?
 
-***
+Now we need to download this file and try to get into it
+
+```cd Downloads/```
+```sqlite3 webapp.db```
+```.tables```
+Here we see tables named "sessions" and "users"
+```PRAGMA table_info(users);```
+```select * from users```
+<img src="/images/CSCI24/OWASPTop10/Task 11 Q3.png">
+
+<img src="/images/CSCI24/OWASPTop10/Task 11 Q3.5.png">
+looks to be the admin hash, lets try to see what it is!
+
+***6eea9b7ef19179a06954edd0f6c05ceb***
 
 Crack the hash.
 What is the admin's plaintext password?
 
-***
+***qwertyuiop***
+
 
 Login as the admin. What is the flag?
 
-***
+If we sign in we see a flag
+
+***THM{Yzc2YjdkMjE5N2VjMzNhOTE3NjdiMjdl}***
+
 
 Task 13
 ---
 
 Full form of XML
 
-***
+***eXtensible Markup Language***
+
 
 Is it compulsory to have XML prolog in XML documents?
 
-***
+***No***
+
 
 Can we validate XML documents against a schema?
 
-***
+***Yes***
+
 
 How can we specify XML version and encoding in XML document?
 
-***
+***XML Prolog***
+
 
 Task 14
 ---
 
 How do you define a new ELEMENT?
 
-***
+***!ELEMENT***
+
 
 How do you define a ROOT element?
 
-***
+***!DOCTYPE***
+
 
 How do you define a new ENTITY?
 
-***
+***!ENTITY***
+
 
 Task 16
 ---
 
 What is the name of the user in /etc/passwd
 
-***
+***Falcon***
+
 
 Where is falcon's SSH key located?
 
-***
+if we type
+
+```<?xml version="1.0"?>```
+```<!DOCTYPE root [<!ENTITY read SYSTEM 'file:///home/falcon/.ssh/id_rsa'>]>```
+```<root>&read;</root>```
+
+we will see the RSA key
+<img src="/images/CSCI24/OWASPTop10/Task 16 Q4.png">
+
+***/home/Falcon/.ssh/id_rsa***
+
 
 What are the first 18 characters for falcon's private key
 
-***
+***MIIEogIBAAKCAQEA7bq***
+
 
 Task 18
 ---
@@ -151,12 +201,14 @@ Look at other users notes. What is the flag?
 
 ***
 
+
 Task 19
 ---
 
 Hack into the webapp, and find the flag!
 
 ***
+
 
 Task 20
 ---
@@ -165,25 +217,31 @@ Navigate to http://MACHINE_IP/ in your browser and click on the "Reflected XSS" 
 
 ***
 
+
 On the same reflective page, craft a reflected XSS payload that will cause a popup with your machines IP address.
 
 ***
+
 
 Now navigate to http://MACHINE_IP/ in your browser and click on the "Stored XSS" tab on the navbar; make an account.
 
 ***
 
+
 Then add a comment and see if you can insert some of your own HTML.
 
 ***
+
 
 On the same page, create an alert popup box appear on the page with your document cookies.
 
 ***
 
+
 Change "XSS Playground" to "I am a hacker" by adding a comment and using Javascript.
 
 ***
+
 
 Task 21
 ---
@@ -192,9 +250,11 @@ Who developed the Tomcat application?
 
 ***
 
+
 What type of attack that crashes services can be performed with insecure deserialization?
 
 ***
+
 
 Task 22
 ---
@@ -207,12 +267,14 @@ B) A Behaviour
 
 ***
 
+
 Task 23
 ---
 
 What is the name of the base-2 formatting that data is sent across a network as? 
 
 ***
+
 
 Task 24
 ---
@@ -221,9 +283,11 @@ If a cookie had the path of webapp.com/login , what would the URL that the user 
 
 ***
 
+
 What is the acronym for the web technology that Secure cookies work over?
 
 ***
+
 
 Task 25
 ---
@@ -232,9 +296,11 @@ Task 25
 
 ***
 
+
 2nd flag (admin dashboard)
 
 ***
+
 
 Task 26
 ---
@@ -243,12 +309,14 @@ flag.txt
 
 ***
 
+
 Task 29
 ---
 
 How many characters are in /etc/passwd (use wc -c /etc/passwd to get the answer)
 
 ***
+
 
 Task 30
 ---
@@ -257,6 +325,8 @@ What IP address is the attacker using?
 
 ***
 
+
 What kind of attack is being carried out?
 
 ***
+
