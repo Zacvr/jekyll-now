@@ -56,6 +56,8 @@ Print out the MOTD.  What favorite beverage is shown?
 
 ***Dr Pepper*** Shocker right?
 
+---
+
 Task 7
 ---
 
@@ -73,6 +75,7 @@ What is the flag that you found in arthur's account?
 
 ***d9ac0f7db4fda460ac3edeb75d75e16e***
 
+---
 
 Task 11
 ---
@@ -125,6 +128,7 @@ If we sign in we see a flag
 
 ***THM{Yzc2YjdkMjE5N2VjMzNhOTE3NjdiMjdl}***
 
+---
 
 Task 13
 ---
@@ -148,6 +152,7 @@ How can we specify XML version and encoding in XML document?
 
 ***XML Prolog***
 
+---
 
 Task 14
 ---
@@ -166,6 +171,7 @@ How do you define a new ENTITY?
 
 ***!ENTITY***
 
+---
 
 Task 16
 ---
@@ -193,6 +199,7 @@ What are the first 18 characters for falcon's private key
 
 ***MIIEogIBAAKCAQEA7bq***
 
+---
 
 Task 18
 ---
@@ -203,6 +210,7 @@ After we login if we change "note=1" to "note=0"
 
 ***flag{fivefourthree}***
 
+---
 
 Task 19
 ---
@@ -216,6 +224,7 @@ Hack into the webapp, and find the flag!
 
 ***thm{4b9513968fd564a87b28aa1f9d672e17}***
 
+---
 
 Task 20
 ---
@@ -258,6 +267,7 @@ Change "XSS Playground" to "I am a hacker" by adding a comment and using Javascr
 
 ***websites_can_be_easily_defaced_with_xss***
 
+---
 
 Task 21
 ---
@@ -271,6 +281,7 @@ What type of attack that crashes services can be performed with insecure deseria
 
 ***Denial of Service***
 
+---
 
 Task 22
 ---
@@ -283,6 +294,7 @@ B) A Behaviour
 
 ***A behaviour***
 
+---
 
 Task 23
 ---
@@ -291,6 +303,7 @@ What is the name of the base-2 formatting that data is sent across a network as?
 
 ***Binary***
 
+---
 
 Task 24
 ---
@@ -304,6 +317,7 @@ What is the acronym for the web technology that Secure cookies work over?
 
 ***HTTPS***
 
+---
 
 Task 25
 ---
@@ -320,6 +334,7 @@ One cookie is in Base64
 
 ***THM{heres_the_admin_flag}***
 
+---
 
 Task 26
 ---
@@ -330,6 +345,7 @@ This one would not work correctly for me
 
 ***4a69a7ff9fd68***
 
+---
 
 Task 29
 ---
@@ -342,6 +358,7 @@ How many characters are in /etc/passwd (use wc -c /etc/passwd to get the answer)
 
 ***1611***
 
+---
 
 Task 30
 ---
