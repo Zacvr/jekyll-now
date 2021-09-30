@@ -34,7 +34,7 @@ I named it VulnInternal
 
 ```smbmap -H VulnInternal```
 
-<img src="/images/CSCI24/OWASPTop10/Task 1 Q1.5.png">
+<img src="/images/CSCI24/VulnNetInternal/Task 1 Q1.5.png">
 
 We see a share named "shares" lets look into it shall we?
 
@@ -42,7 +42,7 @@ We see a share named "shares" lets look into it shall we?
 
 Now we neet to "get" the file suspiciously named "services.txt"
 
-<img src="/images/CSCI24/OWASPTop10/Task 1 Q1.6.png">
+<img src="/images/CSCI24/VulnNetInternal/Task 1 Q1.6.png">
 
 ```smbget -R smb://VulnInternal/shares/temp/services.txt```
 
@@ -50,7 +50,7 @@ Lets cat that file
 
 ```cat services.txt```
 
-<img src="/images/CSCI24/OWASPTop10/Task 1 Q1.7.png">
+<img src="/images/CSCI24/VulnNetInternal/Task 1 Q1.7.png">
 
 What is the services flag? (services.txt)
 
@@ -63,7 +63,7 @@ a quick search [Here](https://blog.christophetd.fr/write-up-vulnix) shows that w
 
 ```showmount -e VulnInternal```
 
-<img src="/images/CSCI24/OWASPTop10/Task 1 Q1.7.png">
+<img src="/images/CSCI24/VulnNetInternal/Task 1 Q1.7.png">
 
 We can copy this into a new directory to look into the results
 
@@ -75,7 +75,7 @@ lets see if we can find anything with grep
 
 ```grep -R pass```
 
-<img src="/images/CSCI24/OWASPTop10/Task 1 Q2.png">
+<img src="/images/CSCI24/VulnNetInternal/Task 1 Q2.png">
 
 After some googling and finding what redis was I found that we need a tool to try and work with it
 
@@ -87,7 +87,7 @@ Lets try to get in with that password we found
 
 ```info```
 
-<img src="/images/CSCI24/OWASPTop10/Task 1 Q2.5.png">
+<img src="/images/CSCI24/VulnNetInternal/Task 1 Q2.5.png">
 
 Now at the bottom we see a key space that we can look into further
 
@@ -113,7 +113,7 @@ I learned from a write up about lrange
 
 is written 3 times and is most likely base64
 
-<img src="/images/CSCI24/OWASPTop10/Task 1 Q3.png">
+<img src="/images/CSCI24/VulnNetInternal/Task 1 Q3.png">
 
 looks like we are going to use rysnc as well (password: Hcg3HP67@TW@Bc72v)
 
