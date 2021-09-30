@@ -105,6 +105,7 @@ What is the internal flag? ("internal flag")
 
 ***THM{ff8e518addbbddb74531a724236a8221}***
 
+---
 
 ```type authlist```
 
@@ -142,6 +143,7 @@ What is the user flag? (user.txt)
 
 ***THM{da7c20696831f253e0afaca8b83c07ab}***
 
+---
 
 What is the root flag? (root.txt)
 
