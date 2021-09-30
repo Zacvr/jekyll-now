@@ -20,7 +20,7 @@ Lets start with a nmap scan shall we?
 
 ```nmap -sC -sV 10.10.106.247```
 
-<img src="/images/CSCI24/OWASPTop10/Task 1 Q1.png">
+<img src="/images/CSCI24/VulnNetInternal/Task 1 Q1.png">
 
 we have quite a few posibilities so lets see if metaspolit sees anything
 
