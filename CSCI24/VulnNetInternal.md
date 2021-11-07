@@ -159,9 +159,9 @@ Lets make sure our key was put in the folder
 
 ```ssh sys-internal@VulnInternal -i id_rsa```
 
-after rooting aroudn there is a fodler named TeamCity
+after rooting around there is a folder named TeamCity
 
-the reame shows us how to run a file
+the readme shows us how to run a file
 
 
 ***
