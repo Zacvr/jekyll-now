@@ -23,3 +23,5 @@ Known by Ed to the uninitiated come and join us on this adventure into CASP+
 <br/><br/>
 [VulnNet: Internal](https://zacvr.github.io/CSCI24/VulnNetInternal/)
 <br/><br/>
+[RPMetasploit](https://zacvr.github.io/CSCI24/RPMetasploit/)
+<br/><br/>
