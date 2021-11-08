@@ -12,10 +12,6 @@ permalink: /CSCI24/PasswordSecurity/
 ---
 <br/>
 
-____testting
-
-
-<img src="/images/CSCI24/VulnNetInternal/Task 1 Q1.png">
 
 Task 2
 ---
