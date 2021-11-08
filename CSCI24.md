@@ -27,3 +27,5 @@ Known by Ed to the uninitiated come and join us on this adventure into CASP+
 <br/><br/>
 [Create & Manage Cloud Resources](https://zacvr.github.io/CSCI24/Create&ManageCloudResources/)
 <br/><br/>
+[Password Security](https://zacvr.github.io/CSCI24/PasswordSecurity/)
+<br/><br/>
