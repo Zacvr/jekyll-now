@@ -12,24 +12,13 @@ permalink: /CSCI24/EncryptionCrypto101/
 ---
 <br/>
 
-Task 3
+Task 2
 ---
 
-What known as the first malware created to affect mobile devices?
+Are SSH keys protected with a passphrase or a password?
 
-***Cabir***
+***passphrase***
 
-What technology does this worm used to multiply?
-
-***Bluetooth***
-
-What operating system did it infect?
-
-***Symbian***
-
-What message did it show on the screen of the infected mobile phone?
-
-***Caribe***
 
 ---
 
@@ -37,17 +26,140 @@ What message did it show on the screen of the infected mobile phone?
 Task 3
 ---
 
-We are going to use the built in VM browser that opens in THM
+What does SSH stand for?
 
 
-What is the format of the file?
-
-***.APK***
+***
 
 
-Decode the name of the sample.
+How do webservers prove their identity?
 
-We will use hURL to decode (you can also use CyberChef)
+***
+
+
+What is the main set of standards you need to comply with if you store or process payment card details?
+
+***
+
+
+---
+
+
+Task 4
+---
+
+
+
+
+
+
+
+
+
+***
+
+
+---
+
+
+Task 5
+---
+
+
+
+
+
+***
+
+
+---
+
+
+Task 6
+---
+
+
+
+
+
+
+
+***
+
+
+---
+
+
+Task 7
+---
+
+
+
+
+
+
+***
+
+
+---
+
+
+Task 8
+---
+
+
+
+***
+
+
+---
+
+
+Task 9
+---
+
+
+***
+
+
+---
+
+
+Task 10
+---
+
+
+
+
+***
+
+
+---
+
+
+Task 11
+---
+
+
+
+
+***
+
+
+---
+
+
+Task 12
+---
+
+
+
+
+***
+
+
+
+
 
 ```hURL -b "TWFsd2FyZQ"```
 
