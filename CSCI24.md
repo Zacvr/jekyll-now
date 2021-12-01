@@ -29,3 +29,5 @@ Known by Ed to the uninitiated come and join us on this adventure into CASP+
 <br/><br/>
 [Password Security](https://zacvr.github.io/CSCI24/PasswordSecurity/)
 <br/><br/>
+[Encryption Crypto 101](https://zacvr.github.io/CSCI24/EncryptionCrypto101/)
+<br/><br/>
