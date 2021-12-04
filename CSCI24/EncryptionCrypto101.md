@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Mobile Malware Analysis
+title: Encryption Crypto 101
 permalink: /CSCI24/EncryptionCrypto101/
 ---
 
