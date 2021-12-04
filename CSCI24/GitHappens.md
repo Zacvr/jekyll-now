@@ -61,7 +61,7 @@ Orrrr not?
 
 okay well if we go to 
 
-```git log``` while in ~/Here we see the commits mad to the git
+```git log``` while in ~/Here we see the commits made to the git
 
 after some googling we can go to specific commits of the git
 
