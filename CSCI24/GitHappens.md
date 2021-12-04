@@ -39,7 +39,7 @@ We see a website with a login BUT if we go to
 
 we can get all the files that we can manually but why not find a script someone has already made to speed up the process?
 
-(Git-Dumper)[https://github.com/arthaud/git-dumper]
+[Git-Dumper](https://github.com/arthaud/git-dumper)
 
 Now we need to install the Git-Dumper
 
