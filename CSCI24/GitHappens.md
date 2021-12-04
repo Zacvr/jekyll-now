@@ -12,161 +12,71 @@ permalink: /CSCI24/GitHappens/
 ---
 <br/>
 
-Task 2
+Can you find the password to the application?
 ---
 
-Are SSH keys protected with a passphrase or a password?
+Looks like we are given a grey box with only an IP and "version control" as a hint
 
-***passphrase***
+With a quick scan
 
+```nmap -sV 10.10.118.209```
 
----
+All we see is port 80 having a "nginx 1.14.0" running
 
+Lets try looking for a Git repo shall we?
 
-Task 3
----
+```nmap -A 10.10.118.209```
 
-What does SSH stand for?
+<img src="/images/CSCI24/GitHappens/Repo Found.png">
 
+now if we go to
 
-***Secure Shell***
+```http://10.10.118.209/``` 
 
+We see a website with a login BUT if we go to
 
-How do webservers prove their identity?
+```10.10.118.209:80/.git/```
 
-***Certificates***
+we can get all the files that we can manually but why not find a script someone has already made to speed up the process?
 
+[Git-Dumper](sudo pip install git-dumper)
 
-What is the main set of standards you need to comply with if you store or process payment card details?
+Now we need to install the Git-Dumper
 
-***PCI-DSS***
+```sudo pip install git-dumper```
 
+Now lets downlaod the files
 
----
+```git-dumper http://10.10.118.209:80/.git  ~/Here```
 
+If you cat the README.md
 
-Task 4
----
+you find the easter egg "git-fail
 
-Time for my single Python programming class to show me the power of the Modulo
+Sometimes, bad things happen to good sites"
 
-What's 30 % 5?
+If we cat the index we find a script at the bottom that we need to decode
 
-***0***
+Orrrr not?
 
+okay well if we go to 
 
-What's 25 % 7
+```git log``` while in ~/Here we see the commits mad to the git
 
-***4***
+after some googling we can go to specific commits of the git
 
+<img src="/images/CSCI24/GitHappens/Commits.png">
 
-What's 118613842 % 9091
+```sudo git checkout 395e087334d613d5e423cdf8f7be27196a360459```
 
-[Mini Web Tool to the rescue!](https://miniwebtool.com/modulo-calculator/)
+Lets look at the index again
 
-***3565***
+```cat index.html```
 
+<img src="/images/CSCI24/GitHappens/Password.png">
 
----
 
+Find the Super Secret Password
 
-Task 5
----
+***Th1s_1s_4_L0ng_4nd_S3cur3_P4ssw0rd!***
 
-Should you trust DES? Yea/Nay
-
-***Nay***
-
-
-What was the result of the attempt to make DES more secure so that it could be used for longer?
-
-***Triple DES***
-
-
-Is it ok to share your public key? Yea/Nay
-
-***Yea***
-
-
----
-
-
-Task 6
----
-
-p*q=n
-
-p = 4391, q = 6659. What is n?
-
-***29239669***
-
-
----
-
-
-Task 8
----
-
-Who is TryHackMe's HTTPS certificate issued by?
-
-By clicking the lock in Firefox > Clicking "Connection Secure" > Click "More Information > Finally Click "View Certificate" under the Security tab we can see the "Common Name"
-
-***R3***
-
-
----
-
-
-Task 9
----
-
-What algorithm does the key use?
-
-***RSA***
-
-
-Crack the password with John The Ripper and rockyou, what's the passphrase for the key?
-
-Finally we can open our VM to try some SSH2John
-
-First lets install it
-
-```wget https://raw.githubusercontent.com/magnumripper/JohnTheRipper/bleeding-jumbo/run/ssh2john.py```
-
-```/usr/share/john/ssh2john.py idrsa.id_rsa > idrdsa.hash```
-
-<img src="/images/CSCI24/EncryptionCrypto101/Task 9 SSH2John Install.png">
-
-we now have a a giant string instead of the Key we had before
-
-<img src="/images/CSCI24/EncryptionCrypto101/KeyToPass.png">
-
-Now we can run John as we would normally
-
-```sudo john --wordlist=/usr/share/wordlists/rockyou.txt idrsa.hash```
-
-<img src="/images/CSCI24/EncryptionCrypto101/PassClear.png">
-
-***delicious***
-
-
----
-
-
-Task 11
----
-
-You have the private key, and a file encrypted with the public key. Decrypt the file. What's the secret word?
-
-After downloaidng the files lets import the key
-
-```gpg --import tryhackme.key```
-
-and now lets open the mesage 
-
-```gpg --decrypt message.gpg > EasyGPG.txt```
-
-<img src="/images/CSCI24/EncryptionCrypto101/GPG.png">
-
-
-***Pineapple***
