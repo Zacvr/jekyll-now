@@ -1,7 +1,7 @@
 ---
 layout: page
 title: MiroCon
-permalink: /CSCI24/MiroCon/
+permalink: /CSCI24/MiroCon1/
 ---
 
 ---
