@@ -27,7 +27,7 @@ Today we will go over the basics of Cryptography and Ciphers to allow us to lear
 
 I am an up-and-comer in the field of Ciphers as well as Cryptography overall. It began as a simple assignment as has spiraled into a love for the language that most would call ciphers.
 
-
+ 
 We will be going over how ciphers began and their uses throughout our existence as well as the basics of string ciphers such as ROT13, A1Z26, Base64, CharCode, & the Cesar cipher. Symbol ciphers such as PigPen, Tic-Tac-Toc, and even the infamous Zodiac Killer Cipher!
 
 
