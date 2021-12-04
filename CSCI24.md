@@ -33,3 +33,5 @@ Known by Ed to the uninitiated come and join us on this adventure into CASP+
 <br/><br/>
 [Git Happens](https://zacvr.github.io/CSCI24/GitHappens/)
 <br/><br/>
+[MiroCon](https://zacvr.github.io/CSCI24/MiroCon/)
+<br/><br/>
